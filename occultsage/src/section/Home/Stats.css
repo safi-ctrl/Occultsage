@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --navy: #0a192f;
+  --light-brown: #D4AF37; 
+  --off-white: #fcfbf7; 
+  --text-gray: #64748b;
+}
+
+.stats-section {
+  padding: 40px 5%;
+  background-color: var(--off-white);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.stats-container-five {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+
+.stat-card {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-card-inner {
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-card-inner {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--navy);
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.stat-suffix {
+  font-size: 1.9rem;
+  color: var(--light-brown);
+  margin-left: 4px;
+}
+
+.stat-line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--light-brown);
+  margin: 10px auto;
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.90rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.stat-stars {
+  color: var(--light-brown);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+
+.vertical-divider {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.3), transparent);
+}
+
+
+@media (max-width: 1024px) {
+  .stats-container-five {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+  }
+  .stat-value {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 50px 0; 
+  }
+  .stats-container-five {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
+  }
+  .stat-value {
+    font-size: 2.2rem;
+  }
+  .stat-label {
+    font-size: 0.75rem; 
+  }
+}
+
+
+.hide-on-mobile {
+  display: block; 
+}
+
+
+@media (max-width: 768px) {
+ 
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .stats-container-five {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    padding: 25px 10px;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,295 @@
+:root {
+  --navy: #101E3C;
+  --navy-light: #1E293B;
+  --gold: #D4AF37;
+  --white: #FFFFFF;
+  --gray-bg: #F8FAFC;
+  --text-dark: #334155;
+}
+
+.expert-section {
+  padding: 100px 5%;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.expert-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+
+.expert-image-area {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main-photo-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 320px;
+  height: 450px;
+}
+
+.expert-main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 4px solid var(--white);
+}
+
+.diamond-frame {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--white);
+  transform: rotate(45deg);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border: 3px solid var(--navy);
+  z-index: 3;
+}
+
+.diamond-img {
+  width: 140%; 
+  height: 140%;
+  object-fit: cover;
+  transform: rotate(-45deg) translate(-15%, -15%);
+}
+
+.left-diamond {
+  bottom: -30px;
+  left: -40px;
+}
+
+.right-diamond {
+  bottom: -60px;
+  right: -20px;
+  border-color: var(--gold);
+}
+
+
+.expert-content-area {
+  flex: 1.2;
+}
+
+.expert-subtitle {
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.expert-title {
+  font-size: 3rem;
+  color: var(--navy);
+  margin: 10px 0;
+  font-weight: 800;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: var(--gold);
+  margin-bottom: 30px;
+}
+
+.expert-intro {
+  font-size: 1.2rem;
+  color: var(--navy-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.highlight-text {
+  color: var(--navy);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.expert-main-text p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.expert-specialization h4 {
+  color: var(--navy);
+  margin: 25px 0 15px;
+  font-size: 1.2rem;
+}
+
+.expert-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.expert-points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.point-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.expert-cta-btn {
+  background: var(--navy);
+  color: var(--white);
+  padding: 16px 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(16, 30, 60, 0.2);
+}
+
+.expert-cta-btn:hover {
+  background: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+
+/* --- Optimized Mobile & Tablet Responsive --- */
+
+@media (max-width: 992px) {
+  .expert-section {
+    padding: 60px 20px; /* Padding kam ki taki space bache */
+  }
+
+  .expert-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px; /* Gap kam kiya vertical stack ke liye */
+  }
+
+  /* Image Area Optimization */
+  .expert-image-area {
+    order: 1; /* Image upar dikhegi mobile par */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-photo-wrapper {
+    width: 280px; /* Tablet par stable size */
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  /* Diamond frames ko thoda shrink kiya taki edges na katen */
+  .diamond-frame {
+    width: 100px;
+    height: 100px;
+  }
+
+  .left-diamond {
+    bottom: -20px;
+    left: -20px;
+  }
+
+  .right-diamond {
+    bottom: -40px;
+    right: -10px;
+  }
+
+  /* Content Area Optimization */
+  .expert-content-area {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .expert-title {
+    font-size: 2.2rem; /* Heading choti ki */
+    margin: 8px 0;
+  }
+
+  .title-underline {
+    margin: 0 auto 25px auto;
+    width: 50px;
+  }
+
+  .expert-intro {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .expert-main-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* List items ko mobile par center align kiya */
+  .expert-points {
+    display: inline-block; /* Container center rahega */
+    text-align: left; /* Text left-aligned hi achha lagta hai */
+    margin-bottom: 30px;
+  }
+
+  .expert-points li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .expert-cta-btn {
+    width: 100%; /* Mobile par full width button click karne mein asan hota hai */
+    max-width: 320px;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-section {
+    padding: 40px 15px;
+  }
+
+  .expert-title {
+    font-size: 1.8rem; /* Chote mobile ke liye font fix */
+  }
+
+  /* Image ko thoda aur compact kiya extreme small screens par */
+  .main-photo-wrapper {
+    width: 230px;
+    height: 320px;
+  }
+
+  .diamond-frame {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+
+  .left-diamond { left: -15px; bottom: -15px; }
+  .right-diamond { right: -10px; bottom: -30px; }
+
+  .expert-intro {
+    font-size: 1rem;
+  }
+
+  .expert-main-text p {
+    font-size: 0.95rem;
+  }
+}

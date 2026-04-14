@@ -1,0 +1,191 @@
+/* --- Global Footer Reset --- */
+.footer-pro {
+    background-color: #1a2e4b; /* Aapka Navy Blue */
+    color: #ffffff;
+    padding: 70px 0 20px 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    position: relative;
+    border-top: 3px solid #98ff1a; /* Top par halki green line */
+}
+
+/* Grid Layout Setup */
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr 1.5fr; /* Systematic Columns */
+    gap: 40px;
+    padding: 0 25px;
+}
+
+/* --- Brand Section --- */
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-logo span {
+    color: #98ff1a; /* Neon Green Logo Part */
+}
+
+.footer-tagline {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d1d5db; /* Soft White */
+    margin-bottom: 25px;
+    max-width: 320px;
+}
+
+/* Contact Info Section */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.icon-badge {
+    color: #98ff1a; /* Icons in Green */
+    font-size: 16px;
+}
+
+.contact-info-row p, 
+.contact-info-row a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-info-row a:hover {
+    color: #98ff1a;
+}
+
+/* --- Links Columns --- */
+.footer-title {
+    color: #98ff1a; /* Headings in Green */
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-bottom: 12px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: #98ff1a;
+    opacity: 1;
+    transform: translateX(6px); /* Hover par halka slide */
+}
+
+/* --- 8 Courses Grid Layout --- */
+.course-grid-links {
+    display: flex;
+    gap: 30px; /* Dono lists ke beech gap */
+}
+
+.course-grid-links .nav-links {
+    flex: 1;
+}
+
+/* --- Legal Bottom Bar --- */
+.footer-legal-bar {
+    margin-top: 50px;
+    padding: 25px 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Halka border */
+}
+
+.legal-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.legal-links a:hover {
+    color: #98ff1a;
+}
+
+.divider {
+    opacity: 0.3;
+}
+
+/* --- Responsive Layout for Mobile --- */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wide-column {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Mobile par sab ek line mein */
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-tagline {
+        margin: 0 auto 20px;
+    }
+
+    .contact-info-row {
+        justify-content: center;
+    }
+
+    .course-grid-links {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .legal-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a:hover {
+        transform: none; /* Mobile par slide effect hata diya */
+    }
+}

@@ -1,0 +1,237 @@
+/* --- UPDATED PREMIUM ROADMAP & STATS CSS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@700&display=swap');
+
+:root {
+  --roadmap-navy: #001a33;      
+  --roadmap-gold: #84cc16; /* Standard Green-Gold for Vastu/Astro */
+  --roadmap-white: #ffffff;
+  --roadmap-text-gray: #a0aec0;
+  --roadmap-glass: rgba(255, 255, 255, 0.03);
+}
+
+.roadmap-classic-section {
+  padding: 100px 0;
+  background-color: var(--roadmap-navy); 
+  color: var(--roadmap-white);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.roadmap-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* --- Header Section --- */
+.roadmap-header {
+  margin-bottom: 60px;
+}
+
+.roadmap-eyebrow {
+  color: var(--roadmap-gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.roadmap-main-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--roadmap-white);
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.roadmap-gold-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--roadmap-gold);
+  margin: 25px auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(132, 204, 22, 0.4);
+}
+
+/* --- Narrative/Description --- */
+.roadmap-narrative {
+  max-width: 850px;
+  margin: 0 auto 80px;
+  line-height: 1.8;
+}
+
+.lead-text {
+  font-size: 22px;
+  color: #e2e8f0;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.secondary-text {
+  font-size: 18px;
+  color: var(--roadmap-text-gray);
+}
+
+.highlight-gold {
+  color: var(--roadmap-gold);
+  font-weight: 700;
+}
+
+/* --- STATS GRID (Desktop 3 Columns) --- */
+.roadmap-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.classic-stat-card {
+  background: var(--roadmap-glass);
+  padding: 45px 20px;
+  border-radius: 18px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.classic-stat-card:hover {
+  background: rgba(132, 204, 22, 0.05); 
+  transform: translateY(-10px);
+  border-color: var(--roadmap-gold);
+}
+
+.card-border-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: var(--roadmap-gold);
+  border-radius: 0 0 5px 5px;
+}
+
+/* Automatic Count-up Number Style */
+.stat-number-classic {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--roadmap-gold);
+  margin-bottom: 12px;
+  display: block;
+  /* Glowing effect during animation */
+  text-shadow: 0 0 20px rgba(132, 204, 22, 0.2);
+}
+
+.stat-label-classic {
+  font-size: 15px;
+  color: var(--roadmap-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* --- Footer & CTA --- */
+.roadmap-footer-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+}
+
+.mission-quote {
+  font-size: 26px;
+  font-style: italic;
+  color: var(--roadmap-gold);
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.luxury-btn {
+  background: transparent;
+  color: var(--roadmap-gold);
+  border: 2px solid var(--roadmap-gold);
+  padding: 16px 45px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  letter-spacing: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.luxury-btn:hover {
+  background: var(--roadmap-gold);
+  color: var(--roadmap-navy);
+  box-shadow: 0 10px 25px rgba(132, 204, 22, 0.3);
+}
+
+/* --- ACCURATE MOBILE RESPONSIVE (1 Row 2 Columns) --- */
+@media (max-width: 768px) {
+  .roadmap-classic-section {
+    padding: 60px 0;
+  }
+
+  .roadmap-main-title {
+    font-size: 30px;
+  }
+
+  .lead-text {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+
+  /* Forcefully 2 columns on mobile */
+  .roadmap-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+    padding: 0 5px;
+  }
+
+  .classic-stat-card {
+    padding: 25px 10px;
+    border-radius: 12px;
+  }
+
+  /* 3rd card will take full width for balance */
+  .classic-stat-card:last-child {
+    grid-column: span 2;
+  }
+
+  .stat-number-classic {
+    font-size: 32px; /* Balanced mobile size */
+  }
+
+  .stat-label-classic {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .mission-quote {
+    font-size: 20px;
+  }
+
+  .luxury-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Very small devices optimization */
+@media (max-width: 400px) {
+  .stat-number-classic {
+    font-size: 28px;
+  }
+  .roadmap-main-title {
+    font-size: 26px;
+  }
+}

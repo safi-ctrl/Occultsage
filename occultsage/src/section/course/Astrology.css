@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --deep-void: #000a14;
+  --navy-accent: #001a33;
+  --gold-primary: #bf953f;
+  --gold-metallic: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 100%);
+  --white: #ffffff;
+}
+
+.premium-page-wrapper {
+  padding: 60px 20px;
+  background-color: #fcfcfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  margin-top: 50px;
+}
+
+/* --- HERO CARD STYLES --- */
+.compact-hero-card {
+  display: flex; width: 100%; max-width: 1050px; background: var(--white);
+  border-radius: 35px; overflow: hidden; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.08);
+}
+.compact-left-branding { width: 38%; background-color: var(--deep-void); padding: 30px; }
+.glass-inner-card { height: 100%; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 25px; padding: 25px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.mini-badge { background: var(--gold-metallic); color: #000; font-size: 10px; font-weight: 800; padding: 4px 14px; border-radius: 50px; }
+.mini-brand-title { font-family: 'Playfair Display', serif; font-size: 32px; color: #fff; margin: 15px 0; line-height: 1; }
+.mini-instructor-img { max-width: 100%; max-height: 240px; object-fit: contain; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); }
+.mini-cert-tag { color: #bf953f; font-size: 11px; font-weight: 700; margin-top: 15px; }
+
+.compact-right-details { width: 62%; padding: 50px; }
+.compact-title { font-size: 34px; font-weight: 800; color: var(--navy-accent); margin-bottom: 20px; }
+.gold-grad { background: var(--gold-metallic); background-clip: text; -webkit-text-fill-color: transparent; }
+.compact-points-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+.point-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #475569; }
+.green-text { color: #84cc16; }
+.compact-price-box { background: #f8fafc; padding: 25px; border-radius: 20px; margin-bottom: 30px; }
+.p-actual { font-size: 40px; font-weight: 800; color: var(--navy-accent); }
+.compact-button-group { display: flex; gap: 20px; }
+.btn-enroll-mini { flex: 1.5; background: var(--navy-accent); color: #fff; border: none; padding: 18px; border-radius: 14px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.btn-syllabus-mini { flex: 1; background: #fff; border: 2.5px solid #e2e8f0; border-radius: 14px; font-weight: 700; cursor: pointer; }
+
+/* --- PREMIUM VIDEO LAYOUT (SIDE-BY-SIDE) --- */
+.premium-video-layout {
+  width: 100%; max-width: 1100px; padding: 80px 40px;
+  background: #ffffff; border-radius: 50px; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.05);
+}
+.video-section-header { text-align: center; margin-bottom: 60px; }
+.gold-label { color: var(--gold-primary); font-weight: 800; font-size: 13px; letter-spacing: 3px; }
+.section-main-title { font-size: 42px; font-weight: 800; color: var(--navy-accent); }
+.gold-text-gradient { background: var(--gold-metallic); background-clip: text; -webkit-text-fill-color: transparent; }
+
+.video-grid-flex { display: flex; gap: 50px; align-items: center; margin-bottom: 60px; }
+.video-player-side { flex: 1.4; position: relative; }
+.video-frame-outer { background: #000; border-radius: 30px; padding: 10px; box-shadow: 0 50px 100px -30px rgba(0,0,0,0.3); position: relative; z-index: 2; }
+.aspect-ratio-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; }
+.aspect-ratio-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-glow-aura { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; background: radial-gradient(circle, rgba(191,149,63,0.12) 0%, transparent 70%); z-index: 1; }
+
+.benefits-cards-side { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.benefit-mini-card { display: flex; align-items: center; gap: 20px; padding: 25px; background: #f8fafc; border-radius: 24px; border: 1px solid #edf2f7; transition: 0.3s; }
+.benefit-mini-card:hover { transform: translateX(10px); border-color: var(--gold-primary); }
+.benefit-icon-wrapper { width: 54px; height: 54px; background: #ffffff; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--gold-primary); box-shadow: 0 8px 15px rgba(191,149,63,0.1); }
+.benefit-info h4 { font-size: 17px; font-weight: 800; color: var(--navy-accent); margin-bottom: 4px; }
+.benefit-info p { font-size: 14px; color: #64748b; line-height: 1.4; }
+
+.bottom-trust-strip { display: flex; justify-content: center; align-items: center; gap: 40px; padding-top: 40px; border-top: 1px solid #f1f5f9; }
+.strip-item { font-size: 15px; color: #475569; }
+.strip-divider { width: 1px; height: 20px; background: #e2e8f0; }
+
+/* --- MOBILE RESPONSIVE OPTIMIZATION (Professional & Sleek) --- */
+
+@media (max-width: 768px) {
+  .premium-page-wrapper {
+    padding: 30px 15px;
+    gap: 40px; /* Sections ke beech ka gap kam kiya */
+    margin-top: 20px;
+  }
+
+  /* --- Hero Card Mobile Adjustments --- */
+  .compact-hero-card {
+    flex-direction: column;
+    border-radius: 25px; /* Corners thode soft kiye */
+  }
+
+  .compact-left-branding {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .glass-inner-card {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .mini-brand-title {
+    font-size: 24px; /* Title chota kiya */
+    margin: 10px 0;
+  }
+
+  .mini-instructor-img {
+    max-height: 180px; /* Image height control ki taki card lamba na lage */
+  }
+
+  .compact-right-details {
+    width: 100%;
+    padding: 25px 20px; /* Side padding kam ki */
+  }
+
+  .compact-title {
+    font-size: 22px; /* Font size balance kiya */
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  /* Points Grid: Mobile par 2 columns theek rahenge lekin font chota */
+  .compact-points-grid {
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .point-item {
+    font-size: 11px; /* Boht chota taki 2 col mein fit ho sake */
+    gap: 5px;
+  }
+
+  .compact-price-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .p-actual {
+    font-size: 30px; /* Price ko thoda compact kiya */
+  }
+
+  .compact-button-group {
+    flex-direction: column; /* Buttons ek ke niche ek */
+    gap: 10px;
+  }
+
+  .btn-enroll-mini {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .btn-syllabus-mini {
+    padding: 12px;
+    font-size: 13px;
+    border-width: 2px;
+  }
+
+  /* --- Video Layout Mobile Adjustments --- */
+  .premium-video-layout {
+    padding: 30px 15px;
+    border-radius: 30px;
+  }
+
+  .video-section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-main-title {
+    font-size: 26px; /* Heading size optimized */
+  }
+
+  .video-grid-flex {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .video-frame-outer {
+    border-radius: 20px;
+    padding: 6px;
+  }
+
+  .benefits-cards-side {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .benefit-mini-card {
+    padding: 15px;
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  .benefit-mini-card:hover {
+    transform: translateX(5px); /* Minimal hover on mobile */
+  }
+
+  .benefit-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .benefit-info h4 {
+    font-size: 15px;
+  }
+
+  .benefit-info p {
+    font-size: 12px;
+  }
+
+  /* Bottom Trust Strip: Stacked or Wrap */
+  .bottom-trust-strip {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 25px;
+  }
+
+  .strip-item {
+    font-size: 12px;
+  }
+
+  .strip-divider {
+    display: none; /* Mobile par dividers acche nahi lagte */
+  }
+}

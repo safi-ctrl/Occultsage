@@ -1,0 +1,159 @@
+/* OccultSage Theme Colors */
+:root {
+    --midnight: #1a1a2e;
+    --gold: #c5a059;
+    --soft-white: #fcfaf7;
+    --border-grey: #e1e1e1;
+}
+
+.occult-contact-wrapper {
+    min-height: 100vh;
+    background-color: var(--soft-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 90px;
+}
+
+.contact-card {
+    background: #fff;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Styling */
+.contact-sidebar {
+    background: var(--midnight);
+    color: white;
+    width: 35%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #b0b0c0;
+    margin-bottom: 40px;
+}
+
+.info-list {
+    margin-top: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+}
+
+/* Form Styling */
+.form-container {
+    width: 65%;
+    padding: 50px;
+}
+
+.form-title {
+    font-size: 2rem;
+    color: var(--midnight);
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.occult-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--midnight);
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid var(--border-grey);
+    border-radius: 10px;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.2);
+}
+
+/* Button Styling */
+.occult-btn {
+    background-color: var(--midnight);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.occult-btn:hover {
+    background-color: var(--gold);
+    color: var(--midnight);
+}
+
+/* Mobile Responsive */
+@media (max-width: 850px) {
+    .contact-card {
+        flex-direction: column;
+    }
+    .contact-sidebar, .form-container {
+        width: 100%;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

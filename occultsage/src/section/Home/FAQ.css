@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
+
+.occult-faq-section {
+  background-color: #030712; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 5%;
+  overflow: hidden;
+}
+
+.faq-cosmic-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; 
+  width: 100%;
+  max-width: 1300px;
+  gap: 60px;
+  align-items: center;
+}
+
+
+.faq-visual-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.moon-3d-sphere {
+  width: 480px; 
+  height: 480px;
+  border-radius: 50%;
+  position: relative;
+  background: transparent !important; 
+  overflow: visible; 
+  
+  
+  box-shadow: 
+    0 0 60px rgba(255, 255, 255, 0.05),
+    0 0 100px rgba(135, 206, 250, 0.02);
+  
+  animation: float 6s ease-in-out infinite;
+}
+
+.moon-surface {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  filter: contrast(1.05) brightness(1);
+}
+
+
+.moon-atmosphere-glow {
+  position: absolute;
+  inset: 0;
+ 
+  box-shadow: inset 15px 15px 40px rgba(255,255,255,0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+.moon-crater-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  background: radial-gradient(circle at 30% 30%, transparent 50%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.cosmic-brand-name {
+  color: #F3E5D8;
+  letter-spacing: 15px;
+  margin-top: 40px;
+  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+
+.faq-premium-title {
+  color: #F3E5D8;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.faq-premium-item {
+  background: rgba(253, 246, 236, 0.03);
+  border: 1px solid rgba(243, 229, 216, 0.1);
+  border-radius: 16px;
+  margin-bottom: 18px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.faq-premium-item:hover {
+  background: rgba(253, 246, 236, 0.06);
+  border-color: rgba(243, 229, 216, 0.2);
+}
+
+.faq-premium-item.active {
+  background: #FDF6EC;
+}
+
+.faq-item-header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #F3E5D8;
+}
+
+.faq-premium-item.active .faq-item-header h3 {
+  color: #030712;
+}
+
+.faq-toggle-icon {
+  font-size: 1.5rem;
+  color: #bf9b30;
+  font-weight: bold;
+}
+
+.faq-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-premium-item.active .faq-item-body {
+  max-height: 250px;
+}
+
+.faq-answer-inner {
+  padding: 0 30px 25px 30px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+
+@media (max-width: 1024px) {
+  .faq-cosmic-container { grid-template-columns: 1fr; }
+  .moon-3d-sphere { width: 320px; height: 320px; }
+  .faq-premium-title { font-size: 2.2rem; text-align: center; }
+}

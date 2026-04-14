@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap');
+
+.who-3d-section {
+  padding: 60px 0; 
+  background-color: #f0f4f8;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.bg-glow-orb {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(26, 46, 75, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.who-card-main {
+  background: #ffffff;
+  border-radius: 35px;
+  display: flex;
+  max-height: 520px; 
+  box-shadow: 0 40px 100px rgba(26, 46, 75, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+
+.who-image-container {
+  flex: 0.7; 
+  background-color: #1a2e4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; 
+  position: relative;
+}
+
+.image-3d-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 280px; 
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: 0.6s ease;
+}
+
+.who-card-main:hover .image-3d-wrapper {
+  transform: perspective(1000px) rotateY(0deg) scale(1.05);
+}
+
+.consultant-img-3d {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background: #bf9b30;
+  color: #fff;
+  padding: 10px 20px; 
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+.who-text-content {
+  flex: 1.3;
+  padding: 40px 60px; 
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.brand-tag {
+  color: #bf9b30;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 15px; 
+}
+
+.who-heading-3d {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem; 
+  color: #1a2e4b;
+  line-height: 1.2;
+  margin-bottom: 20px; 
+}
+
+.who-heading-3d span {
+  color: #bf9b30;
+}
+
+.who-description-box {
+  margin-bottom: 25px; 
+}
+
+.p-main {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a2e4b;
+  margin-bottom: 8px;
+}
+
+.p-sub {
+  color: #64748b;
+  line-height: 1.6; 
+  font-size: 0.95rem;
+}
+
+
+.who-stats-grid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px; 
+}
+
+.mini-stat-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 15px 10px; 
+  border-radius: 15px;
+  border: 1px solid #edf2f7;
+}
+
+.mini-stat-card h3 {
+  font-size: 1.5rem; 
+  margin-bottom: 2px;
+}
+
+.mini-stat-card p {
+  font-size: 10px;
+}
+
+
+.pro-btn-3d {
+  background: #f9fbff;
+  padding: 15px 35px; 
+  font-size: 0.9rem;
+  border-radius: 12px;
+}
+
+/* --- SMART RESPONSIVE LAYOUT (Mobile & Tablet) --- */
+
+@media (max-width: 992px) {
+  .who-3d-section {
+    padding: 40px 10px;
+  }
+
+  .who-card-main {
+    flex-direction: row; /* Desktop jaisa row hi rakha hai */
+    max-height: none;
+    align-items: stretch;
+    border-radius: 20px;
+  }
+
+  /* 1. Left Side: Image (Narrowed for Mobile) */
+  .who-image-container {
+    flex: 0.4; /* Image ko thoda patla kiya 2 columns fit karne ke liye */
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-3d-wrapper {
+    max-width: 140px; /* Chota size taki space bache */
+    transform: none; /* Mobile par tilt hata diya clean look ke liye */
+  }
+
+  .experience-badge {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 9px;
+    text-align: center;
+    display: block;
+  }
+
+  /* 2. Right Side: Text & Stats */
+  .who-text-content {
+    flex: 0.6;
+    padding: 20px 15px;
+    text-align: left;
+  }
+
+  .who-heading-3d {
+    font-size: 1.3rem; /* Heading choti ki taki row mein fit ho */
+    margin-bottom: 10px;
+  }
+
+  .p-main {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .p-sub {
+    font-size: 0.75rem; /* Font size chota for compact look */
+    line-height: 1.4;
+  }
+
+  /* 3. Stats Grid (2 Columns inside the right column) */
+  .who-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 15px 0;
+  }
+
+  .mini-stat-card {
+    padding: 8px 5px;
+    border-radius: 8px;
+  }
+
+  .mini-stat-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .mini-stat-card p {
+    font-size: 8px;
+  }
+
+  /* 4. Button Fix */
+  .pro-btn-3d {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- Extreme Small Phones (Portrait) --- */
+@media (max-width: 550px) {
+  /* Yahan row ko column karna hi behtar hai warna kuch dikhega nahi */
+  .who-card-main {
+    flex-direction: column;
+  }
+  
+  .who-image-container, .who-text-content {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .image-3d-wrapper {
+    max-width: 180px;
+  }
+
+  .who-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

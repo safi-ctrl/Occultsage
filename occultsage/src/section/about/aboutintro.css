@@ -1,0 +1,447 @@
+
+:root {
+  --navy: #0a192f;
+  --navy-light: #112240;
+  --gold-accent: #84cc16;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+  --text-gray: #64748b;
+}
+
+.vastu-container {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin-top: 70px;
+}
+
+
+.vastu-hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 25, 47, 0.95) 30%, rgba(10, 25, 47, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content {
+  max-width: 650px;
+  color: var(--white);
+}
+
+.tagline {
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  color: var(--gold-accent);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #ccd6f6;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  padding: 15px 35px;
+  background: var(--gold-accent);
+  color: var(--navy);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline {
+  padding: 15px 35px;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+
+.features-section {
+  padding: 100px 5%;
+  background: var(--off-white);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title p {
+  color: var(--gold-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin: 10px 0;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background: var(--gold-accent);
+  margin: 20px auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border-bottom: 4px solid transparent;
+  transition: 0.4s ease;
+}
+
+.feature-card:hover {
+  border-bottom: 4px solid var(--navy);
+}
+
+.icon-box {
+  width: 60px;
+  height: 600x;
+  color: var(--navy);
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+
+:root {
+  --navy: #0a192f;
+  --navy-light: #112240;
+  --gold-accent: #c5a059;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+  --text-gray: #64748b;
+}
+
+.vastu-container {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin-top: 70px;
+}
+
+
+.vastu-hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 25, 47, 0.95) 30%, rgba(10, 25, 47, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content {
+  max-width: 650px;
+  color: var(--white);
+}
+
+.tagline {
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  color: var(--gold-accent);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #ccd6f6;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  padding: 15px 35px;
+  background: var(--gold-accent);
+  color: var(--navy);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline {
+  padding: 15px 35px;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+
+.features-section {
+  padding: 100px 5%;
+  background: var(--off-white);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title p {
+  color: var(--gold-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin: 10px 0;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+  background: var(--gold-accent);
+  margin: 20px auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border-bottom: 4px solid transparent;
+  transition: 0.4s ease;
+}
+
+.feature-card:hover {
+  border-bottom: 4px solid var(--navy);
+}
+
+.icon-box {
+  width: 60px;
+  height: 600x;
+  color: var(--navy);
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* --- FEATURES SECTION MOBILE RESPONSIVE --- */
+
+@media (max-width: 992px) {
+  .features-section {
+    padding: 60px 15px; /* Side padding kam ki taki cards ko space mile */
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  /* Accurate 1 Row 2 Columns Layout */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Forcefully 2 columns */
+    gap: 12px; /* Gaps ko kam kiya taki cards screen se bahar na jayen */
+  }
+
+  .feature-card {
+    padding: 20px 15px; /* Card ke andar ka space kam kiya */
+    border-radius: 10px;
+    text-align: center; /* Center alignment 2-column mobile view mein better lagti hai */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-box {
+    width: 45px;
+    height: 45px; /* Icons ko chota kiya */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-box svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem; /* Heading choti ki taki 1-2 line mein fit ho */
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .feature-card p {
+    font-size: 0.75rem; /* Description font size chota kiya visibility ke liye */
+    line-height: 1.4;
+    color: #4b5563;
+  }
+}
+
+/* Tablet (iPad) ke liye thoda balanced look */
+@media (min-width: 600px) and (max-width: 992px) {
+  .features-grid {
+    gap: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hero Section Mobile Adjustments */
+@media (max-width: 768px) {
+  .vastu-hero {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(0deg, rgba(10, 25, 47, 0.98) 40%, rgba(10, 25, 47, 0.6) 100%);
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-btns {
+    flex-direction: column; /* Mobile par buttons stack honge */
+    gap: 12px;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    padding: 12px;
+  }
+}

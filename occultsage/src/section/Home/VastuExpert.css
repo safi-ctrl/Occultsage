@@ -1,0 +1,171 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+.vastu-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.vastu-header-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.vastu-image-wrapper {
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.vastu-main-card {
+    aspect-ratio: 10/7;
+    background-color: #F3F0E9;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.vastu-main-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vastu-play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vastu-play-btn {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.vastu-play-btn:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+}
+
+.vastu-play-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #444;
+    margin-left: 5px;
+}
+
+.vastu-bg-shape {
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #F3F0E9;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+
+.vastu-content-side {
+    width: 100%;
+}
+
+.vastu-content-side h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.vastu-content-side h1 span {
+    color: #000;
+    font-weight: 800;
+}
+
+.vastu-intro-p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.vastu-highlight-p {
+    font-weight: 600;
+    color: #222;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+
+.vastu-tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.vastu-tip-item {
+    display: flex;
+    gap: 20px;
+}
+
+.vastu-lotus-icon-box {
+    flex-shrink: 0;
+}
+
+.vastu-tip-text h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.vastu-tip-text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.vastu-footer-box {
+    margin-top: 80px;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 40px;
+}
+
+
+@media (min-width: 768px) {
+    .vastu-header-flex {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .vastu-image-wrapper { width: 35%; }
+    .vastu-content-side { width: 65%; }
+    .vastu-tips-grid { grid-template-columns: 1fr 1fr; }
+}

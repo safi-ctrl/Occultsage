@@ -1,0 +1,256 @@
+
+
+.vastu-intro-section {
+  padding: 80px 0;
+  background-color: #f7f1e6; 
+  position: relative;
+  overflow: hidden;
+}
+
+
+.vastu-bg-watermark {
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 700px;
+  height: 600px;
+  background-image: url('/vastu-chakra.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.04; 
+  z-index: 0;
+  pointer-events: none;
+  transform: rotate(15deg);
+}
+
+.vastu-intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.vastu-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0d123b;
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 70px;
+  height: 5px;
+  background: #b78628; 
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.vastu-points li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.vastu-points li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #b78628;
+  font-weight: bold;
+}
+
+
+.monitor-frame {
+  width: 100%;
+  max-width: 550px;
+  perspective: 1000px;
+}
+
+.screen {
+  background: #222;
+  border: 12px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.screen img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.screen:hover img { transform: scale(1.05); }
+
+.monitor-stand-neck {
+  width: 60px;
+  height: 30px;
+  background: #999;
+  margin: 0 auto;
+}
+
+.monitor-stand-base {
+  width: 180px;
+  height: 10px;
+  background: #777;
+  margin: 0 auto;
+  border-radius: 5px 5px 0 0;
+}
+
+
+.booking-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.booking-bar {
+  background: #0d123b;
+  padding: 15px 40px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(13, 18, 59, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.booking-bar:hover { transform: translateY(-5px); }
+
+.whatsapp-icon-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden; 
+  border: 3px solid white;
+  margin-right: 25px;
+  background: white;
+}
+
+.whatsapp-icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.booking-text span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+}
+
+.booking-text a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .vastu-intro-section {
+        padding: 30px 15px 60px 15px; 
+        overflow-x: hidden;
+        margin-top: -70px;
+    }
+
+    .vastu-intro-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+   
+    .vastu-content {
+        width: 100%;
+        order: 1;
+    }
+
+    .vastu-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .title-underline {
+        margin: 0 auto 25px auto; 
+        width: 60px;
+    }
+
+    .vastu-points {
+        text-align: left; 
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .vastu-points li {
+        font-size: 15px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+   
+    .vastu-points li::before {
+        content: "•";
+        color: #b33939; 
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+   
+    .vastu-visual {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    .monitor-frame {
+        padding: 8px; 
+    }
+
+    .monitor-stand-neck, .monitor-stand-base {
+        display: none; 
+    }
+
+    
+    .booking-bar-wrapper {
+        width: 90%;
+        left: 5%;
+        bottom: 20px;
+    }
+
+    .booking-bar {
+        padding: 10px 15px;
+        border-radius: 50px; 
+        justify-content: center;
+        gap: 12px;
+        margin-top: -40px;
+    }
+
+    .whatsapp-icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .booking-text span {
+        font-size: 12px;
+        display: block;
+    }
+
+    .booking-text a {
+        font-size: 16px;
+    }
+}

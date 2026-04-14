@@ -1,0 +1,262 @@
+.meet-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9fb 100%);
+  margin-bottom: -80px; 
+ 
+}
+
+.acharya-card {
+  display: flex;
+  gap: 50px; 
+  background: #ffffff; 
+  border-radius: 30px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(26, 46, 75, 0.04), 0 30px 60px rgba(26, 46, 75, 0.08); 
+  align-items: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.acharya-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(26, 46, 75, 0.12);
+}
+
+
+.acharya-image {
+  flex: 0 0 380px;
+  position: relative;
+}
+
+
+.acharya-image::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid #FFB800;
+  border-left: 5px solid #FFB800;
+  border-radius: 20px 0 0 0;
+  z-index: 0;
+}
+
+.acharya-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(20%);
+  transition: 0.5s ease;
+}
+
+.acharya-card:hover .acharya-image img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+
+.acharya-info {
+  flex: 1;
+}
+
+.acharya-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #1a2e4b;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.acharya-header h3 {
+  font-family: 'Inter', sans-serif;
+  color: #6b38c1; 
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+.acharya-details-flex {
+  display: flex;
+  gap: 40px;
+  align-items: stretch; 
+}
+
+.acharya-points-col {
+  flex: 1;
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.points-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+
+.check-icon {
+  background: rgba(107, 56, 193, 0.1);
+  color: #6b38c1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 0.8rem;
+}
+
+
+.book-consult-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1a2e4b 0%, #2c3e50 100%);
+  color: #ffffff;
+  padding: 16px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: 0.3s all;
+  box-shadow: 0 10px 20px rgba(26, 46, 75, 0.2);
+  border: none;
+}
+
+.book-consult-btn:hover {
+  background: #6b38c1;
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(107, 56, 193, 0.3);
+}
+
+
+.acharya-bio-col {
+  flex: 1.2;
+  border-left: 2px solid #f0f0f0; 
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.acharya-bio-col p {
+  font-family: 'Inter', sans-serif;
+  color: #555;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+
+.acharya-bio-col p::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 4rem;
+  color: #f0f0f0;
+  font-family: 'Playfair Display', serif;
+  z-index: -1;
+}
+
+
+@media (max-width: 992px) {
+  .meet-section { 
+    padding: 60px 15px; 
+  }
+
+  .acharya-card {
+    flex-direction: column; 
+    padding: 30px 20px;
+    gap: 25px;
+    text-align: center; 
+  }
+
+  .acharya-image { 
+    flex: 0 0 auto; 
+    width: 100%; 
+    max-width: 320px; 
+    margin: 0 auto; 
+  }
+
+  .acharya-image img { 
+    height: 320px; 
+    border-radius: 20px;
+  }
+
+  .acharya-image::before { 
+    display: none; 
+  }
+
+  .acharya-header h2 {
+    font-size: 2.2rem; 
+  }
+
+  .acharya-header h3 {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .acharya-details-flex { 
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .points-list {
+    margin-bottom: 20px;
+  }
+
+  .points-list li {
+    justify-content: center; 
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .check-icon {
+    margin-right: 10px;
+  }
+
+  .acharya-bio-col {
+    border-left: none; 
+    padding-left: 0;
+    border-top: 1px solid #eee; 
+    padding-top: 30px;
+    margin-top: 10px;
+  }
+
+  .acharya-bio-col p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+
+  .acharya-bio-col p::before {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    font-size: 3rem;
+  }
+a
+  .book-consult-btn {
+    width: 100%; 
+    max-width: 280px;
+    padding: 14px 20px;
+  }
+}
