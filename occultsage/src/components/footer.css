@@ -150,10 +150,12 @@
     opacity: 0.3;
 }
 
-/* --- Responsive Layout for Mobile --- */
+/* --- Professional Responsive Footer --- */
+
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
     .wide-column {
         grid-column: span 2;
@@ -162,30 +164,71 @@
 
 @media (max-width: 650px) {
     .footer-grid {
-        grid-template-columns: 1fr; /* Mobile par sab ek line mein */
-        gap: 35px;
-        text-align: center;
+        grid-template-columns: 1fr; /* Single column stack */
+        gap: 40px;
+        text-align: left; /* Center ke bajaye Left alignment professional lagta hai */
+        padding: 0 20px;
+    }
+
+    .footer-section-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Ek chhoti underline title ke niche professional touch ke liye */
+    .footer-section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 30px;
+        height: 2px;
+        background-color: #c5a059; /* OccultSage Gold Theme */
     }
 
     .footer-tagline {
-        margin: 0 auto 20px;
+        margin: 0 0 25px;
+        max-width: 100%;
+        line-height: 1.6;
+        font-size: 0.95rem;
     }
 
     .contact-info-row {
-        justify-content: center;
+        justify-content: flex-start; /* Icons left se start honge */
+        margin-bottom: 12px;
+        gap: 15px;
     }
 
     .course-grid-links {
+        display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 12px; /* Links ke beech thoda space */
+    }
+
+    .course-grid-links a {
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Soft divider lines */
     }
 
     .legal-content {
         flex-direction: column;
-        gap: 15px;
+        align-items: flex-start; /* Copyright left align */
+        gap: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+    }
+
+    /* Social Icons list setup */
+    .social-links {
+        justify-content: flex-start;
+        margin-top: 20px;
+        gap: 20px;
     }
 
     .nav-links a:hover {
-        transform: none; /* Mobile par slide effect hata diya */
+        transform: none; 
+        color: #c5a059;
     }
 }

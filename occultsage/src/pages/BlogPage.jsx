@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import SidebarSection from "../section/sidebar/Sidebar";
 import "./BlogPage.css"; 
 
 const BlogPage = () => {
@@ -10,61 +9,81 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        // Backend URL se data fetch karna
-        const response = await fetch("http://localhost:5000/api/blogs/all");
+        const response = await fetch("http://localhost:5000/api/blogs/get-all-blogs");
         const data = await response.json();
-        setBlogs(data);
-        setLoading(false);
+        
+        // Data handling
+        const actualData = Array.isArray(data) ? data : (data.blogs || []);
+        
+        // Vastuenergetics style filtering
+        const filteredBlogs = actualData.filter(blog => 
+          !blog.status || ['published', 'approved'].includes(blog.status.toLowerCase())
+        );
+        
+        setBlogs(filteredBlogs);
       } catch (error) {
-        console.error("Backend connectivity issue:", error);
+        console.error("Fetch Error:", error);
+      } finally {
         setLoading(false);
       }
     };
     fetchBlogs();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="professional-blog-layout">
-      {/* LEFT: FIXED SIDEBAR */}
-      <aside className="left-fixed-sidebar">
-        <div className="sidebar-sticky-content">
-          <h2 className="sidebar-logo">OCCULTSAGE</h2>
-          <div className="sidebar-divider"></div>
-          <SidebarSection />
+    <div className="ve-blog-page">
+      {/* Dynamic Hero Section */}
+      <header className="ve-blog-header">
+        <div className="ve-header-content">
+          <h1>Blogs</h1>
+          <nav className="ve-breadcrumb">Home » Blogs</nav>
         </div>
-      </aside>
+      </header>
 
-      {/* RIGHT: SCROLLABLE CONTENT */}
-      <main className="right-scrollable-feed">
-        <header className="feed-header">
-          <h1 className="feed-title">Latest Insights</h1>
-          <p className="feed-subtitle">Automatic Wisdom from MongoDB</p>
-        </header>
+      <div className="ve-container">
+        {loading ? (
+          <div className="ve-loading-state">
+            <div className="spinner"></div>
+            <p>Gathering Wisdom...</p>
+          </div>
+        ) : (
+          <div className="ve-blog-grid">
+            {blogs.map((blog) => (
+              <div key={blog._id} className="ve-blog-card">
+                {/* Thumbnail Section */}
+                <div className="ve-card-image">
+                  <Link to={`/blog/${blog._id}`}>
+                    <img 
+                      src={blog.image || blog.thumbnail || 'https://via.placeholder.com/600x400?text=Occult+Sage'} 
+                      alt={blog.title} 
+                      loading="lazy"
+                    />
+                  </Link>
+                  <div className="ve-badge">BLOG</div>
+                </div>
 
-        <div className="blog-cards-container">
-          {loading ? (
-            <div className="sacred-loader">Connecting to Database...</div>
-          ) : (
-            blogs.map((blog) => {
-              // Extract ID from doc_link
-              const docId = blog.doc_link?.match(/\/d\/(.*?)(\/|$)/)?.[1];
-              return (
-                <article key={blog._id} className="premium-card">
-                  <div className="card-img-wrapper">
-                    <img src={blog.image} alt={blog.title} />
-                    <span className="card-badge">{blog.category}</span>
+                {/* Content Section */}
+                <div className="ve-card-content">
+                  <div className="ve-post-meta">
+                    <span className="ve-author">
+                      <i className="fa-regular fa-user"></i> BY VASTUENERGETICS
+                    </span>
                   </div>
-                  <div className="card-content">
-                    <h3>{blog.title}</h3>
-                    <p>{blog.excerpt?.substring(0, 100)}...</p>
-                    <Link to={`/blog/${docId}`} className="read-btn">Read Article →</Link>
-                  </div>
-                </article>
-              );
-            })
-          )}
-        </div>
-      </main>
+                  
+                  <h3 className="ve-post-title">
+                    <Link to={`/blog/${blog._id}`}>{blog.title}</Link>
+                  </h3>
+                  
+                  <Link to={`/blog/${blog._id}`} className="ve-btn-readmore">
+                    READ MORE <span className="ve-arrow">→</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

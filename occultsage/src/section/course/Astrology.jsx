@@ -1,124 +1,156 @@
-import React, { useEffect } from 'react';
-import { Star, ShieldCheck, Zap, Award, BookOpen, ArrowRight, CheckCircle2, Globe, Users } from 'lucide-react';
-import './Astrology.css';
+import React, { useEffect } from "react";
+import {
+  Star,
+  ShieldCheck,
+  Zap,
+  ArrowRight,
+  CheckCircle2,
+  Users,
+} from "lucide-react";
+import "../../Styles/Courses.css";
 
 const Astrology = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const features = [
+    "40+ Modules",
+    "Scientific Logic",
+    "Lifetime Access",
+    "Case Studies",
+  ];
+
+  const benefits = [
+    {
+      icon: <ShieldCheck size={22} />,
+      title: "ISO Certified",
+      desc: "Globally valid certification",
+    },
+    {
+      icon: <Zap size={22} />,
+      title: "Scientific Remedies",
+      desc: "No demolition needed",
+    },
+    {
+      icon: <Users size={22} />,
+      title: "15,000+ Community",
+      desc: "Strong student network",
+    },
+  ];
+
   return (
-    <div className="premium-page-wrapper">
+    <div className="premium-wrapper">
+
       
-      {/* --- SECTION 1: COMPACT HERO CARD (Kept Same Size) --- */}
-      <div className="compact-hero-card">
-        <div className="compact-left-branding">
-          <div className="glass-inner-card">
-             <div className="mini-badge">BEST SELLER</div>
-             <h2 className="mini-brand-title">VASTU<br/>SHASTRA</h2>
-             <div className="mini-instructor-frame">
-                <img src="/Acharyajii.png" alt="Acharya Pankaj" className="mini-instructor-img" />
-             </div>
-             <div className="mini-cert-tag">PROFESSIONAL SERIES</div>
+      <section className="hero-card">
+
+        
+        <div className="hero-left">
+          <div className="hero-glass">
+
+            <span className="badge">BEST SELLER</span>
+
+            <h2 className="course-tag">VASTU SHASTRA</h2>
+
+            <div className="image-box">
+              <img src="/Acharyajii.png" alt="Acharya" />
+            </div>
+
+            <p className="cert">PROFESSIONAL SERIES</p>
+
           </div>
         </div>
 
-        <div className="compact-right-details">
-          <div className="compact-status-row">
-            <span className="verify-tag">● ISO CERTIFIED</span>
-            <div className="mini-rating">
-              <Star size={12} fill="#84cc16" color="#84cc16" /> 
-              <span>4.9 (1.2K+ Students)</span>
+        
+        <div className="hero-right">
+
+          
+          <div className="top-row">
+            <span className="verified">ISO CERTIFIED</span>
+
+            <div className="rating">
+              <Star size={14} fill="#84cc16" color="#84cc16" />
+              <span>4.9 (1.2K+)</span>
             </div>
           </div>
 
-          <h1 className="compact-title">
-            Vastu Masterclass: <span className="gold-grad">Basic to Pro</span>
+          
+          <h1 className="title">
+            Vastu Masterclass <span>Basic to Pro</span>
           </h1>
 
-          <div className="compact-points-grid">
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> 40+ HD Modules</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Scientific Logic</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Lifetime Access</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Case Studies</div>
+          
+          <div className="features">
+            {features.map((item, index) => (
+              <div className="feature-item" key={index}>
+                <CheckCircle2 size={16} className="icon" />
+                {item}
+              </div>
+            ))}
           </div>
 
-          <div className="compact-price-box">
-             <div className="price-row">
-                <span className="p-actual">₹19,999</span>
-                <span className="p-off">20% OFF</span>
-             </div>
-             <p className="p-note">Certificate + Community Access Included</p>
+          
+          <div className="price-box">
+            <h2>₹19,999</h2>
+            <span className="discount">20% OFF</span>
+            <p>Certificate + Community Included</p>
           </div>
 
-          <div className="compact-button-group">
-            <button className="btn-syllabus-mini">SYLLABUS</button>
-            <button className="btn-enroll-mini">
-              ENROLL NOW <ArrowRight size={18} />
+          
+          <div className="btn-group">
+            <button className="outline">View Syllabus</button>
+
+            <button className="primary">
+              Enroll Now <ArrowRight size={18} />
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* --- SECTION 2: PREMIUM VIDEO LAYOUT (As per Astrovastu Style) --- */}
-      <section className="premium-video-layout">
-        <div className="video-section-header">
-          <span className="gold-label">INSIDE THE ACADEMY</span>
-          <h2 className="section-main-title">Experience the <span className="gold-text-gradient">Logic of Vastu</span></h2>
-          <p className="section-subtitle">Take a 2-minute tour to see how we bridge ancient Vedic wisdom with modern scientific logic.</p>
+        </div>
+      </section>
+
+      
+      <section className="video-section">
+
+        
+        <div className="heading">
+          <p className="sub">INSIDE THE ACADEMY</p>
+          <h2>
+            Experience the <span>Logic of Vastu</span>
+          </h2>
         </div>
 
-        <div className="video-grid-flex">
-          {/* LEFT: Cinematic Video Player */}
-          <div className="video-player-side">
-            <div className="video-glow-aura"></div>
-            <div className="video-frame-outer">
-              <div className="aspect-ratio-box">
-                <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="Course Preview"
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
+        
+        <div className="video-layout">
+
+          
+          <div className="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Course Preview"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
           </div>
 
-          {/* RIGHT: High-Impact Benefit Cards */}
-          <div className="benefits-cards-side">
-            <div className="benefit-mini-card">
-              <div className="benefit-icon-wrapper"><ShieldCheck size={24} /></div>
-              <div className="benefit-info">
-                <h4>ISO Certified Academy</h4>
-                <p>Internationally recognized certification valid globally.</p>
-              </div>
-            </div>
+          
+          <div className="benefits">
+            {benefits.map((item, index) => (
+              <div className="card" key={index}>
 
-            <div className="benefit-mini-card">
-              <div className="benefit-icon-wrapper"><Zap size={24} /></div>
-              <div className="benefit-info">
-                <h4>Logic-Driven Remedies</h4>
-                <p>Scientific solutions without structural demolition.</p>
-              </div>
-            </div>
+                <div className="icon-box">
+                  {item.icon}
+                </div>
 
-            <div className="benefit-mini-card">
-              <div className="benefit-icon-wrapper"><Users size={24} /></div>
-              <div className="benefit-info">
-                <h4>15,000+ Community</h4>
-                <p>Access to India's most vibrant expert network.</p>
+                <div className="text">
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+
               </div>
-            </div>
+            ))}
           </div>
-        </div>
 
-        {/* Bottom Trust Strip */}
-        <div className="bottom-trust-strip">
-           <div className="strip-item"><b>1,200+</b> Happy Reviews</div>
-           <div className="strip-divider"></div>
-           <div className="strip-item"><b>45+</b> Countries Reach</div>
-           <div className="strip-divider"></div>
-           <div className="strip-item"><b>24/7</b> Student Support</div>
         </div>
       </section>
 

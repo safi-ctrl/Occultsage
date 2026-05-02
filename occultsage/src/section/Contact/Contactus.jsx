@@ -3,26 +3,26 @@ import './Contactus.css';
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    course: '',
-    message: ''
+    name: '', 
+    email: '', 
+    phone: '', 
+    course: '', 
+    degree: '',
+    message: '',
   });
 
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const courses = [
-    "Professional Astrology Course",
-    "Mastery in Numerology",
-    "Tarot Card Reading Mastery",
-    "Vastu Shastra Professional",
-    "Palmistry Certification",
-    "Reiki Healing Level 1 & 2",
-    "Vedic Astrology Deep Dive",
-    "Crystal Healing Course",
-    "🔮 Book a 1-on-1 Consultation"
+    "Professional Astrology Course", "Mastery in Numerology",
+    "Tarot Card Reading Mastery", "Astro+VastuCombo",
+    "Palmistry Certification", "Motion reading",
+    "Face Reading", "Watch reading","vedic Astrology",
+    "🔮 Book a Consultation"
+  ];
+
+  const degrees = [
+    "10th/12th Pass", "Graduate", "Post Graduate", "PhD / Doctorate", "Other Professional Course"
   ];
 
   const handleChange = (e) => {
@@ -32,37 +32,21 @@ const Contactus = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypab412XBBPTu1PZA3wriUlQEAJMFupLtxGYhEXd8rSV_HWs5dP_p4oHZOLqoyWIf8/exec";
+    const SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL";
 
     try {
-     
       await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-     
-      alert("Success! Your message has been sent to OccultSage.");
-      
-      
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        course: '',
-        message: ''
-      });
-      e.target.reset(); 
-
+      alert("Success! Message sent to OccultSage.");
+      setFormData({ name: '', email: '', phone: '', course: '', degree: '', message: '' }); 
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again later.");
+      alert("Something went wrong.");
     } finally {
       setIsSubmitting(false);
     }
@@ -71,98 +55,83 @@ const Contactus = () => {
   return (
     <div className="occult-contact-wrapper">
       <div className="contact-card">
-        
+        {/* Left Sidebar */}
         <div className="contact-sidebar">
           <div className="sidebar-content">
             <h2 className="brand-logo">OccultSage</h2>
-            <p className="tagline italic">Unlock the secrets of the Universe.</p>
+            <p className="tagline">Unlock the secrets of the Universe.</p>
             
             <div className="info-list">
               <div className="info-item">
                 <span className="icon">📧</span>
-                <p>contact@occultsage.com</p>
+                <div>
+                  <p className="info-label">Email Us</p>
+                  <p className="info-text">contact@occultsage.com</p>
+                </div>
               </div>
               <div className="info-item">
                 <span className="icon">💬</span>
-                <p>+91 98765 43210</p>
-              </div>
-              <div className="info-item">
-                <span className="icon">📍</span>
-                <p>Global Online Consultation</p>
+                <div>
+                  <p className="info-label">WhatsApp</p>
+                  <p className="info-text">+91 98719 90719</p>
+                </div>
               </div>
             </div>
           </div>
           <div className="sidebar-footer">
-            <p>Join our 10k+ spiritual seekers community.</p>
+            <p>Join 10k+ seekers community.</p>
           </div>
         </div>
 
-        
+        {/* Right Form Container */}
         <div className="form-container">
-          <h1 className="form-title">Start Your Journey</h1>
-          <p className="form-subtitle">Fill in the details below to master the ancient arts.</p>
-          
+          <div className="form-header">
+            <h1 className="form-title">Start Your Journey</h1>
+            <div className="title-underline"></div>
+            <p className="form-subtitle">Fill out the details below to connect with us.</p>
+          </div>
+
           <form className="occult-form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label>Full Name</label>
-              <input 
-                type="text" 
-                name="name" 
-                placeholder="e.g. Aryan Sharma" 
-                value={formData.name}
-                onChange={handleChange} 
-                required 
-              />
+              <input type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
             </div>
 
             <div className="input-row">
               <div className="input-group">
                 <label>WhatsApp Number</label>
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  placeholder="+91 XXXX-XXXXXX" 
-                  value={formData.phone}
-                  onChange={handleChange} 
-                  required 
-                />
+                <input type="tel" name="phone" placeholder="+91..." value={formData.phone} onChange={handleChange} required />
               </div>
               <div className="input-group">
                 <label>Email Address</label>
-                <input 
-                  type="email" 
-                  name="email" 
-                  placeholder="name@example.com" 
-                  value={formData.email}
-                  onChange={handleChange} 
-                  required 
-                />
+                <input type="email" name="email" placeholder="name@email.com" value={formData.email} onChange={handleChange} required />
+              </div>
+            </div>
+
+            <div className="input-row">
+              <div className="input-group">
+                <label>Qualification</label>
+                <select name="degree" value={formData.degree} onChange={handleChange} required>
+                  <option value="">Select Qualification</option>
+                  {degrees.map((d, i) => <option key={i} value={d}>{d}</option>)}
+                </select>
+              </div>
+              <div className="input-group">
+                <label>Course/Consultancy</label>
+                <select name="course" value={formData.course} onChange={handleChange} required>
+                  <option value="">Select Option</option>
+                  {courses.map((c, i) => <option key={i} value={c}>{c}</option>)}
+                </select>
               </div>
             </div>
 
             <div className="input-group">
-              <label>Choose Course or Consultation</label>
-              <select name="course" value={formData.course} onChange={handleChange} required>
-                <option value="">Select an option</option>
-                {courses.map((course, index) => (
-                  <option key={index} value={course}>{course}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="input-group">
-              <label>Your Message</label>
-              <textarea 
-                name="message" 
-                rows="4" 
-                placeholder="Tell us how we can help you..." 
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
+              <label>Message</label>
+              <textarea name="message" rows="3" placeholder="How can we guide you?" value={formData.message} onChange={handleChange}></textarea>
             </div>
 
             <button type="submit" className="occult-btn" disabled={isSubmitting}>
-              {isSubmitting ? "Sending Details..." : "Connect with OccultSage"}
+              {isSubmitting ? "Sending..." : "Connect Now →"}
             </button>
           </form>
         </div>

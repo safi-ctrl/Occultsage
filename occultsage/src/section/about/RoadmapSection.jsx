@@ -4,7 +4,7 @@ import './RoadmapSection.css';
 const Roadmap = () => {
   const stats = [
     { num: "5000+", label: "Consultations Done" },
-    { num: "2000+", label: "Successful Students" },
+    { num: "50000+", label: "Successful Students" },
     { num: "15+", label: "Years of Legacy" }
   ];
 

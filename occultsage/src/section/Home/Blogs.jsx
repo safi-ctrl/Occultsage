@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'; 
 import './blogs.css';
 
 const Blogs = () => {
@@ -30,7 +31,13 @@ const Blogs = () => {
     <section className="blog-section">
       <div className="blog-upper-bg">
         <div className="title-area">
-          <span className="sparkle">✦</span>
+          <motion.span 
+            className="sparkle"
+            animate={{ rotate: [0, 180, 360], scale: [1, 1.2, 1] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          >
+            ✦
+          </motion.span>
           <h2>Vastu Insights by Acharya Pankaj</h2>
           <p>Scientific Vastu tips to transform your living space into a powerhouse of positivity.</p>
         </div>
@@ -38,7 +45,14 @@ const Blogs = () => {
 
       <div className="blog-grid">
         {blogs.map((blog) => (
-          <div className="blog-card-new" key={blog.id}>
+          <motion.div 
+            className="blog-card-new" 
+            key={blog.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.5, delay: blog.id * 0.1 }}
+          >
             <div className="card-img-wrapper">
               <img src={blog.img} alt={blog.title} />
               <span className="category-tag">{blog.tag}</span>
@@ -46,9 +60,11 @@ const Blogs = () => {
             <div className="card-info">
               <h3>{blog.title}</h3>
               <p>{blog.desc}</p>
-              <button className="read-btn">Continue Reading →</button>
+              <button className="read-btn">
+                Continue Reading <span>→</span>
+              </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

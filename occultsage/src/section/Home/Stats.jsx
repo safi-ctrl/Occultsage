@@ -9,7 +9,7 @@ const Stats = () => {
 
   const statsData = [
     { target: 15, suffix: " +", label: "Years of Experience", decimals: 0 },
-    { target: 20, suffix: "k+", label: "Lives Touched", decimals: 0 },
+    { target: 215, suffix: "k+", label: "Lives Touched", decimals: 0 },
     { target: 2, suffix: "K+", label: "TV Shows", decimals: 0 },
     { target: 25, suffix: " +", label: "Awards for Excellence", decimals: 0 },
     { target: 4.9, suffix: "/5", label: "Rated on Google", decimals: 1 }
@@ -63,7 +63,7 @@ const Stats = () => {
               <p className="stat-label">{stat.label}</p>
               {index === 4 && <div className="stat-stars">★★★★★</div>}
             </div>
-            {/* Vertical Divider for Desktop */}
+            
             {index !== statsData.length - 1 && <div className="vertical-divider"></div>}
           </div>
         ))}

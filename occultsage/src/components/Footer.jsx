@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './footer.css'; 
 
 const Footer = () => {
-    // Page badalne par top par le jane ke liye function
+    
     const handleScrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -73,9 +73,10 @@ const Footer = () => {
                 <div className="legal-content">
                     <p>
                         &copy; 2026 
-                        {/* SECRET ADMIN ACCESS POINT - Click on "OccultSage" to access Admin Panel */}
+                        
+                        {/* SECRET ADMIN ACCESS - Occult par click se Approval Dashboard, Sage par click se Manual Add */}
                         <Link 
-                            to="/add-secret-blog-mongo" 
+                            to="/admin/approval-panel" 
                             style={{ 
                                 textDecoration: 'none', 
                                 color: 'inherit', 
@@ -84,14 +85,28 @@ const Footer = () => {
                                 marginLeft: '4px'
                             }}
                         >
-                            OccultSage.
+                            Occult
+                        </Link>
+                        <Link 
+                            to="/add-secret-blog-mongo" 
+                            style={{ 
+                                textDecoration: 'none', 
+                                color: 'inherit', 
+                                cursor: 'default', 
+                                userSelect: 'none'
+                            }}
+                        >
+                            Sage.
                         </Link>
                         {" "}All Spiritual Rights Reserved
                     </p>
                     <div className="legal-links">
+                        {/* New link for bloggers */}
+                        <Link to="/write-for-us" onClick={handleScrollToTop} style={{ opacity: 0.6, fontSize: '0.85rem' }}>Write for Us</Link>
+                        <span className="divider">|</span>
                         <Link to="/privacy-policy" onClick={handleScrollToTop}>Privacy Policy</Link>
                         <span className="divider">|</span>
-                        <Link to="/terms-conditions" onClick={handleScrollToTop}>Terms of Service</Link>
+                        <Link to="/terms-conditions" onClick={handleScrollToTop}>TermsPage</Link>
                     </div>
                 </div>
             </div>

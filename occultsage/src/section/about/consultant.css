@@ -170,33 +170,33 @@
 }
 
 
-/* --- Optimized Mobile & Tablet Responsive --- */
+
 
 @media (max-width: 992px) {
   .expert-section {
-    padding: 60px 20px; /* Padding kam ki taki space bache */
+    padding: 60px 20px; 
   }
 
   .expert-container {
     flex-direction: column;
     text-align: center;
-    gap: 60px; /* Gap kam kiya vertical stack ke liye */
+    gap: 60px; 
   }
 
-  /* Image Area Optimization */
+  
   .expert-image-area {
-    order: 1; /* Image upar dikhegi mobile par */
+    order: 1; 
     width: 100%;
     margin-bottom: 20px;
   }
 
   .main-photo-wrapper {
-    width: 280px; /* Tablet par stable size */
+    width: 280px; 
     height: 380px;
     margin: 0 auto;
   }
 
-  /* Diamond frames ko thoda shrink kiya taki edges na katen */
+  
   .diamond-frame {
     width: 100px;
     height: 100px;
@@ -212,14 +212,14 @@
     right: -10px;
   }
 
-  /* Content Area Optimization */
+  
   .expert-content-area {
     width: 100%;
     padding: 0 10px;
   }
 
   .expert-title {
-    font-size: 2.2rem; /* Heading choti ki */
+    font-size: 2.2rem; 
     margin: 8px 0;
   }
 
@@ -240,10 +240,10 @@
     text-align: center;
   }
 
-  /* List items ko mobile par center align kiya */
+  
   .expert-points {
-    display: inline-block; /* Container center rahega */
-    text-align: left; /* Text left-aligned hi achha lagta hai */
+    display: inline-block; 
+    text-align: left; 
     margin-bottom: 30px;
   }
 
@@ -254,7 +254,7 @@
   }
 
   .expert-cta-btn {
-    width: 100%; /* Mobile par full width button click karne mein asan hota hai */
+    width: 100%; 
     max-width: 320px;
     padding: 14px 20px;
     font-size: 1rem;
@@ -267,10 +267,10 @@
   }
 
   .expert-title {
-    font-size: 1.8rem; /* Chote mobile ke liye font fix */
+    font-size: 1.8rem; 
   }
 
-  /* Image ko thoda aur compact kiya extreme small screens par */
+  
   .main-photo-wrapper {
     width: 230px;
     height: 320px;

@@ -9,12 +9,12 @@
 }
 
 .sidebar-title {
-  color: #c5a059; /* Gold */
+  color: #c5a059; 
   font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid #bcfe2f; /* Lime Green Line */
+  border-bottom: 2px solid #bcfe2f; 
   padding-bottom: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-/* Trending Style */
+
 .trending-list {
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@
   font-weight: bold;
 }
 
-/* Latest Style with Thumbnails */
+
 .latest-list {
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@
   letter-spacing: 1px;
 }
 
-/* CTA Section */
+
 .sidebar-cta {
   background: rgba(197, 160, 89, 0.1);
   border: 1px dashed #c5a059;

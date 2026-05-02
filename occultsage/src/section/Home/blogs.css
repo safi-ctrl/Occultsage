@@ -201,83 +201,110 @@
 }
 
 
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
 @media (max-width: 768px) {
   
-  .blog-upper-bg { 
-    height: 380px; 
-    border-radius: 0 0 60px 0; 
-    padding-top: 50px; 
+  .blog-upper-bg {
+    background-color: #0a192f;
+    padding: 60px 20px 160px 20px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .main-title {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 10px 0;
+    max-width: 90%;
+  }
+
+  .sub-title {
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 85%;
+    margin-bottom: 20px;
   }
 
   
-  .title-area h2 { 
-    font-size: 2.2rem; 
-    padding: 0 15px;
-    line-height: 1.2;
+  .blog-grid {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 18px;
+    padding: 0 20px 40px 20px;
+    
+    margin-top: -80px; 
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    align-items: stretch;
+    
   }
 
-  .title-area p { 
-    font-size: 0.95rem; 
-    padding: 0 20px;
-    margin-top: 10px;
-  }
-
-  .sparkle { 
-    font-size: 24px; 
-    margin-bottom: 10px;
+  .blog-grid::-webkit-scrollbar {
+    display: none;
   }
 
   
-  .blog-grid { 
-    margin: -140px auto 0; 
-    padding: 0 20px; 
-    grid-template-columns: 1fr; 
-    gap: 25px; 
-  }
-
- 
   .blog-card-new {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    background: #ffffff;
     border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.03);
+    margin-bottom:20px ;
   }
 
   .card-img-wrapper {
-    height: 200px; 
-  }
-
-  .category-tag {
-    top: 15px;
-    right: 15px;
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-
-  .card-info { 
-    padding: 25px;
-  }
-
-  .card-info h3 { 
-    font-size: 1.25rem; 
-    margin-bottom: 10px;
-  }
-
-  .card-info p { 
-    font-size: 0.9rem; 
-    margin-bottom: 20px;
-    line-height: 1.6;
-    display: -webkit-box;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
+    height: 190px;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
   }
 
-
-  .read-btn {
-    font-size: 0.85rem;
-    padding: 5px 0;
+  .card-info {
+    padding: 22px 18px; 
+    text-align: left;
   }
 
-  
-  .blog-card-new:hover {
-    transform: translateY(-8px) scale(1.01);
+  .card-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #0a192f;
+    margin-bottom: 12px;
+    min-height: 50px;
+  }
+
+  .card-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .read-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #d4af37;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 }

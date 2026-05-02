@@ -1,262 +1,237 @@
-.meet-section {
-  padding: 100px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f9f9fb 100%);
-  margin-bottom: -80px; 
- 
+:root {
+    --navy-deep: #0B1623;
+    --gold-primary: #D4AF37;
+    --gold-soft: #f1dfa8;
+    --cream-bg: #FFFBF5;
+    --white: #ffffff;
+    --text-para: #5a6372;
 }
 
-.acharya-card {
-  display: flex;
-  gap: 50px; 
-  background: #ffffff; 
-  border-radius: 30px;
-  padding: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(26, 46, 75, 0.04), 0 30px 60px rgba(26, 46, 75, 0.08); 
-  align-items: center;
-  transition: all 0.4s ease;
-  border: 1px solid rgba(0,0,0,0.02);
-}
-
-.acharya-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 40px 80px rgba(26, 46, 75, 0.12);
+.acharya-section-wrapper {
+    background-color: var(--cream-bg);
+    padding: 60px 20px; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 
-.acharya-image {
-  flex: 0 0 380px;
-  position: relative;
+.acharya-card-main {
+    max-width: 950px; 
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    border-radius: 30px; 
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(11, 22, 35, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    z-index: 1;
 }
 
 
-.acharya-image::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 100px;
-  height: 100px;
-  border-top: 5px solid #FFB800;
-  border-left: 5px solid #FFB800;
-  border-radius: 20px 0 0 0;
-  z-index: 0;
+.acharya-visual-side {
+    flex: 0.85; 
+    position: relative;
+    min-height: 480px; 
+    background: #e5e7eb;
 }
 
-.acharya-image img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 25px;
-  position: relative;
-  z-index: 1;
-  filter: grayscale(20%);
-  transition: 0.5s ease;
-}
-
-.acharya-card:hover .acharya-image img {
-  filter: grayscale(0%);
-  transform: scale(1.02);
+.main-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 
-.acharya-info {
-  flex: 1;
+.experience-float-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: rgba(11, 22, 35, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 12px 18px;
+    border-radius: 15px;
+    border: 1px solid var(--gold-primary);
+    color: white;
 }
 
-.acharya-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #1a2e4b;
-  margin-bottom: 8px;
-  font-weight: 800;
+.exp-num { font-size: 1.8rem; font-weight: 800; color: var(--gold-primary); display: block; line-height: 1; }
+.exp-text { font-size: 0.6rem; letter-spacing: 1.5px; font-weight: 600; }
+
+
+.acharya-text-side {
+    flex: 1.15;
+    padding: 40px 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.acharya-header h3 {
-  font-family: 'Inter', sans-serif;
-  color: #6b38c1; 
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 35px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.pill-badge {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold-primary);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
 }
 
-
-.acharya-details-flex {
-  display: flex;
-  gap: 40px;
-  align-items: stretch; 
+.acharya-name {
+    font-size: 2.8rem; 
+    color: var(--navy-deep);
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    margin: 0;
 }
 
-.acharya-points-col {
-  flex: 1;
-}
-
-.points-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 40px;
-}
-
-.points-list li {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-}
-
-
-.check-icon {
-  background: rgba(107, 56, 193, 0.1);
-  color: #6b38c1;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 15px;
-  font-size: 0.8rem;
+.acharya-tagline {
+    font-size: 1rem;
+    color: var(--text-para);
+    margin: 10px 0 25px 0;
+    font-weight: 500;
 }
 
 
-.book-consult-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #1a2e4b 0%, #2c3e50 100%);
-  color: #ffffff;
-  padding: 16px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  transition: 0.3s all;
-  box-shadow: 0 10px 20px rgba(26, 46, 75, 0.2);
-  border: none;
+.stats-mini-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.book-consult-btn:hover {
-  background: #6b38c1;
-  color: #fff;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(107, 56, 193, 0.3);
+.stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 
-.acharya-bio-col {
-  flex: 1.2;
-  border-left: 2px solid #f0f0f0; 
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
+.quote-container {
+    border-left: 3px solid var(--gold-primary);
+    padding-left: 15px;
+    margin-bottom: 30px;
 }
 
-.acharya-bio-col p {
-  font-family: 'Inter', sans-serif;
-  color: #555;
-  line-height: 1.9;
-  font-size: 1.05rem;
-  position: relative;
-}
-
-
-.acharya-bio-col p::before {
-  content: '"';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  font-size: 4rem;
-  color: #f0f0f0;
-  font-family: 'Playfair Display', serif;
-  z-index: -1;
-}
-
-
-@media (max-width: 992px) {
-  .meet-section { 
-    padding: 60px 15px; 
-  }
-
-  .acharya-card {
-    flex-direction: column; 
-    padding: 30px 20px;
-    gap: 25px;
-    text-align: center; 
-  }
-
-  .acharya-image { 
-    flex: 0 0 auto; 
-    width: 100%; 
-    max-width: 320px; 
-    margin: 0 auto; 
-  }
-
-  .acharya-image img { 
-    height: 320px; 
-    border-radius: 20px;
-  }
-
-  .acharya-image::before { 
-    display: none; 
-  }
-
-  .acharya-header h2 {
-    font-size: 2.2rem; 
-  }
-
-  .acharya-header h3 {
+.quote-container p {
+    font-style: italic;
+    color: var(--text-para);
     font-size: 0.95rem;
-    margin-bottom: 25px;
-  }
+    line-height: 1.5;
+}
 
-  .acharya-details-flex { 
-    flex-direction: column; 
-    gap: 20px; 
-  }
 
-  .points-list {
-    margin-bottom: 20px;
-  }
-
-  .points-list li {
-    justify-content: center; 
+.btn-connect-premium {
+    background: var(--navy-deep);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
     font-size: 0.9rem;
-    margin-bottom: 12px;
-  }
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+@media (max-width: 900px) {
+    
+    .acharya-section-wrapper {
+        padding: 10px 10px; 
+    }
 
-  .check-icon {
-    margin-right: 10px;
-  }
+    .acharya-card-main {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 15px;
+        margin: 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
 
-  .acharya-bio-col {
-    border-left: none; 
-    padding-left: 0;
-    border-top: 1px solid #eee; 
-    padding-top: 30px;
-    margin-top: 10px;
-  }
+    
+    .acharya-visual-side {
+        width: 100%;
+        height: 370px; 
+        min-height: 320px;
+        flex: none;
+     
+    }
 
-  .acharya-bio-col p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
+    .main-portrait {
+        width: 100%;
+        height: 105%;
+        object-fit: cover;
+        
+        object-position: center 20%; 
+    }
+
+    
+    .acharya-text-side {
+        padding: 30px 15px; 
+        gap: 10px; 
+    }
+
+    .pill-badge {
+        margin-bottom: 5px;
+        font-size: 0.6rem;
+        padding: 4px 10px;
+    }
+
+    .acharya-name {
+        font-size: 1.6rem; 
+        line-height: 1.1;
+    }
+
+    .acharya-tagline {
+        font-size: 0.85rem;
+        margin: 5px 0 10px 0;
+    }
+
+    
+    .stats-mini-row {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .stat-pill {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+        border-radius: 6px;
+    }
+
+   
+    .quote-container {
+        margin-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .quote-container p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .btn-connect-premium {
+        padding: 12px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
 
 
-  .acharya-bio-col p::before {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    font-size: 3rem;
-  }
-a
-  .book-consult-btn {
-    width: 100%; 
-    max-width: 280px;
-    padding: 14px 20px;
-  }
+    .experience-float-badge {
+        bottom: 10px;
+        left: 10px;
+        padding: 6px 10px;
+    }
+    .exp-num { font-size: 1.1rem; }
 }

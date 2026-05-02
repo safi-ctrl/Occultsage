@@ -1,0 +1,128 @@
+.tc-page-container {
+    background-color: #f5f7fa;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #2d3748;
+}
+
+.tc-document-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    padding: 60px;
+    border-top: 8px solid #1a2e4b; 
+}
+
+.tc-doc-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tc-badge {
+    display: inline-block;
+    padding: 6px 15px;
+    background: #f1f5f9;
+    color: #1a2e4b;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.tc-doc-header h1 {
+    font-family: 'Marcellus', serif;
+    font-size: 3.2rem;
+    color: #1a2e4b;
+    margin-bottom: 10px;
+}
+
+.tc-doc-header h1 span {
+    color: #d4af37; 
+}
+
+.tc-accent-bar {
+    width: 80px;
+    height: 4px;
+    background: #d4af37;
+    margin: 25px auto;
+}
+
+.tc-intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4a5568;
+    padding: 30px;
+    background: #fcf9f0; 
+    border-radius: 12px;
+    margin-bottom: 60px;
+    border-left: 5px solid #d4af37;
+}
+
+.tc-legal-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.tc-block-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tc-id {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: #1a2e4b;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.tc-block h2 {
+    font-size: 1.5rem;
+    color: #1a2e4b;
+    margin: 0;
+    font-family: 'Marcellus', serif;
+}
+
+.tc-block p {
+    line-height: 1.8;
+    color: #4a5568;
+    padding-left: 47px;
+}
+
+.tc-highlight {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.tc-doc-footer {
+    margin-top: 80px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 40px;
+}
+
+.tc-final-line {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+
+@media (max-width: 768px) {
+    .tc-document-box { padding: 30px; }
+    .tc-doc-header h1 { font-size: 2.2rem; }
+    .tc-block p { padding-left: 0; margin-top: 10px; }
+}

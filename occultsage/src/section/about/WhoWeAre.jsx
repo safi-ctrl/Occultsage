@@ -4,7 +4,7 @@ import './WhoWeAre.css';
 const WhoWeAre = () => {
   const stats = [
     { num: '15+', label: 'Years of Expertise' },
-    { num: '50000+', label: 'Spaces Harmonized' },
+    { num: '5000+', label: 'Spaces Harmonized' },
     { num: '100+', label: 'Courses Mentored' }
   ];
 

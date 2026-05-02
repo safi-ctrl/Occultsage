@@ -21,7 +21,7 @@ const Home = () => (
     <Hero />
     <Stats />
     <MeetAcharya />
-    <Services />
+    <Services/>
     <Ourproduct />
     <Blogs />
     <VastuIntro />

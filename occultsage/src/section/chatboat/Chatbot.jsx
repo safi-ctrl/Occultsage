@@ -38,7 +38,7 @@ const Chatbot = () => {
         setTimeout(() => {
             let nextMsg = { text: "", sender: 'bot', options: [] };
 
-            // --- MAIN CATEGORIES ---
+            
             switch (option) {
                 case "Explore Courses 📚":
                 case "Back to Courses ⬅️":
@@ -98,7 +98,7 @@ const Chatbot = () => {
                     nextMsg.options = ["Contact Support 📞", "Main Menu 🏠"];
                     break;
 
-                // --- DYNAMIC COURSE HANDLING ---
+                
                 default:
                     const course = DATA.courses.find(c => c.name === option);
                     if (course) {

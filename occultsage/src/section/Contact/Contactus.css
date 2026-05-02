@@ -1,159 +1,249 @@
-/* OccultSage Theme Colors */
 :root {
-    --midnight: #1a1a2e;
-    --gold: #c5a059;
-    --soft-white: #fcfaf7;
-    --border-grey: #e1e1e1;
+  --primary: #1a2e4b;
+  --accent: #6da41d;
+  --bg-soft: #f8fafc;
+  --text-slate: #64748b;
 }
 
 .occult-contact-wrapper {
-    min-height: 100vh;
-    background-color: var(--soft-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 90px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-card {
-    background: #fff;
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
-/* Sidebar Styling */
+
 .contact-sidebar {
-    background: var(--midnight);
-    color: white;
-    width: 35%;
-    padding: 50px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex: 0 0 350px; 
+  background: var(--primary);
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.brand-logo {
-    color: var(--gold);
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
+.brand-logo { color: var(--accent); font-size: 2.2rem; font-weight: 800; margin: 0; }
+.tagline { opacity: 0.9; font-size: 0.95rem; margin-top: 10px; line-height: 1.4; }
 
-.tagline {
-    font-size: 0.9rem;
-    color: #b0b0c0;
-    margin-bottom: 40px;
-}
+.info-list { margin-top: 60px; display: flex; flex-direction: column; gap: 35px; }
+.info-item { display: flex; align-items: center; gap: 18px; }
+.info-item .icon { font-size: 1.4rem; background: rgba(255,255,255,0.1); padding: 12px; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+.info-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; margin-bottom: 2px; }
+.info-text { font-size: 1rem; font-weight: 500; margin: 0; }
 
-.info-list {
-    margin-top: 30px;
-}
+.sidebar-footer { font-size: 0.85rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; }
 
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.info-item .icon {
-    font-size: 1.5rem;
-}
-
-/* Form Styling */
+/* Form Section - THE FIX IS HERE */
 .form-container {
-    width: 65%;
-    padding: 50px;
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  background: #ffffff;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 45px; 
+  width: 100%;
 }
 
 .form-title {
-    font-size: 2rem;
-    color: var(--midnight);
-    margin-bottom: 10px;
+  font-size: 2.6rem;
+  color: var(--primary);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.title-underline {
+  width: 65px;
+  height: 5px;
+  background: var(--accent);
+  margin: 15px auto;
+  border-radius: 10px;
 }
 
 .form-subtitle {
-    color: #666;
-    margin-bottom: 30px;
+  color: var(--text-slate);
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
+
 .occult-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 100%;
+  max-width: 580px; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .input-row {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-.input-row .input-group {
-    flex: 1;
+.input-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.input-group label { font-size: 0.85rem; font-weight: 700; color: #1e293b; margin-left: 4px; }
+
+.input-group input, .input-group select, .input-group textarea {
+  padding: 14px 18px;
+  border: 2px solid #f1f5f9;
+  background: #f8fafc;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: var(--primary);
 }
 
-.input-group label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    color: var(--midnight);
+.input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(109, 164, 29, 0.1);
 }
 
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1.5px solid var(--border-grey);
-    border-radius: 10px;
-    transition: 0.3s;
-    font-family: inherit;
-}
-
-.input-group input:focus, 
-.input-group select:focus, 
-.input-group textarea:focus {
-    border-color: var(--gold);
-    outline: none;
-    box-shadow: 0 0 8px rgba(197, 160, 89, 0.2);
-}
-
-/* Button Styling */
 .occult-btn {
-    background-color: var(--midnight);
-    color: var(--gold);
-    border: 2px solid var(--gold);
-    padding: 15px;
-    font-weight: bold;
+  background: var(--accent);
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 10px 20px -5px rgba(109, 164, 29, 0.4);
+}
+
+.occult-btn:hover { 
+  background: #5d8c18; 
+  transform: translateY(-3px); 
+  box-shadow: 0 15px 25px -5px rgba(109, 164, 29, 0.5);
+}
+
+
+@media (max-width: 768px) {
+  
+  .occult-contact-wrapper {
+    padding: 10px 5px !important;
+    min-height: auto;
+    background: transparent;
+    margin-top: 90px;
+    margin-bottom: 20px;
+  }
+
+  
+  .contact-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin: 0 auto;
+  }
+
+  
+  .contact-sidebar {
+    display: none !important; 
+  }
+
+  
+  .form-container {
+    padding: 15px 12px !important;
+  }
+
+  .form-header {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .form-title {
+    font-size: 1.2rem !important; 
+    margin-bottom: 2px;
+  }
+
+  .form-subtitle {
+    font-size: 0.75rem !important;
+    line-height: 1.2;
+  }
+
+  .title-underline {
+    margin: 5px auto;
+    width: 30px;
+  }
+
+  
+  .occult-form {
+    gap: 8px !important; 
+  }
+
+  .input-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .input-group {
+    margin-bottom: 2px;
+  }
+
+  .input-group label {
+    font-size: 0.75rem !important; 
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+
+  
+  .input-group input, 
+  .input-group select, 
+  .input-group textarea {
+    padding: 8px 10px !important; 
+    font-size: 14px !important; 
+    height: 40px; 
+    border-radius: 6px;
+  }
+
+  
+  textarea[name="message"] {
+    height: 60px !important;
+    min-height: 60px;
+  }
+
+  
+  .occult-btn {
+    padding: 10px !important;
+    font-size: 0.95rem !important;
     margin-top: 10px;
+    width: 100%;
+    border-radius: 6px;
+  }
 }
 
-.occult-btn:hover {
-    background-color: var(--gold);
-    color: var(--midnight);
-}
 
-/* Mobile Responsive */
-@media (max-width: 850px) {
-    .contact-card {
-        flex-direction: column;
-    }
-    .contact-sidebar, .form-container {
-        width: 100%;
-    }
-    .input-row {
-        flex-direction: column;
-        gap: 20px;
-    }
+@media (max-width: 380px) {
+  .form-title {
+    font-size: 1.1rem !important;
+  }
+  .input-group label {
+    font-size: 0.7rem !important;
+  }
 }

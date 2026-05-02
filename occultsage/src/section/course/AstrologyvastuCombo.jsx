@@ -1,116 +1,153 @@
-import React from 'react';
-import { ShieldCheck, Star, Zap, Globe, Clock, User, Award, Download, ArrowRight, CheckCircle2, PlayCircle } from 'lucide-react';
-import './astrologyvastuCombo.css'; 
+import React, { useEffect } from "react";
+import {
+  Star,
+  ShieldCheck,
+  Zap,
+  ArrowRight,
+  CheckCircle2,
+  Users,
+  Award,
+  Globe,
+  Clock,
+  PlayCircle
+} from "lucide-react";
+import "../../Styles/Courses.css";
 
 const AstrologyvastuCombo = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  const features = [
+    "Predictive Astrology Mastery",
+    "Professional Vastu Shastra",
+    "Remedial Science Secrets",
+    "100+ Practical Case Studies",
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap size={22} />,
+      title: "Double Income Potential",
+      desc: "Scale your business by offering dual expertise in both Astrology & Vastu.",
+    },
+    {
+      icon: <ShieldCheck size={22} />,
+      title: "Deep Root Analysis",
+      desc: "Identify if the block is in the Birth Chart or the Living Space with precision.",
+    },
+    {
+      icon: <Award size={22} />,
+      title: "Dual Certification",
+      desc: "Get certified in both domains under the guidance of Acharya Pankaj Ji.",
+    },
+  ];
+
   return (
-    <div className="combo-compact-wrapper">
+    <main className="premium-wrapper">
+
       
-      {/* --- SECTION 1: COMPACT HERO CARD (Keep as is) --- */}
-      <div className="compact-combo-card">
-        <div className="compact-left-brand">
-          <div className="glass-vault">
-             <div className="mini-badge">COMBO OFFER</div>
-             <h2 className="brand-title-mini">ULTIMATE<br /><span className="gold-text">DIVINE</span><br />COMBO</h2>
-             <div className="compact-img-frame">
-                <img src="/Astrovastu.png" alt="Acharya Pankaj Ji" className="img-fit" />
-             </div>
-             <div className="mini-cert-pill">
-                <Award size={14} /> Professional Dual Certification
-             </div>
+      <section className="hero-card">
+
+        
+        <div className="hero-left">
+          <div className="hero-glass">
+            <span className="badge">MEGA COMBO OFFER</span>
+            <h2 className="course-tag">COMBO</h2>
+            
+            <div className="image-box">
+              
+              <img src="/Astrovastu.png" alt="Astrology & Vastu Combo" />
+            </div>
+
+            <p className="cert">PROFESSIONAL DUAL CERTIFICATION</p>
           </div>
         </div>
 
-        <div className="compact-right-info">
-          <div className="compact-meta">
-            <span className="premium-tag">PRO MASTERCLASS</span>
-            <div className="mini-rating">
-              <Star size={12} fill="#d4af37" color="#d4af37" /> 
+        
+        <div className="hero-right">
+          <div className="top-row">
+            <span className="verified">HOLISTIC EXPERT PATH</span>
+            <div className="rating">
+              <Star size={14} fill="#84cc16" color="#84cc16" />
               <span>4.9 (250+ Success Stories)</span>
             </div>
           </div>
-          <h1 className="compact-heading">
-            Astrology & Vastu Masterclass <br />
-            <span className="gold-gradient-text">Foundation to Professional</span>
+
+          <h1 className="title">
+            Astrology & Vastu <span>Ultimate Divine Combo</span>
           </h1>
-          <div className="compact-feature-grid">
-            <div className="mini-f-item"><CheckCircle2 size={16} className="green-icon" /> Predictive Astrology</div>
-            <div className="mini-f-item"><CheckCircle2 size={16} className="green-icon" /> Professional Vastu</div>
-            <div className="mini-f-item"><CheckCircle2 size={16} className="green-icon" /> Remedial Science</div>
-            <div className="mini-f-item"><CheckCircle2 size={16} className="green-icon" /> Practical Cases</div>
+
+          <p className="subtitle">
+            Become a complete spiritual consultant. Learn to align space energy with 
+            celestial logic to provide 360-degree life solutions for your clients.
+          </p>
+
+          <div className="features">
+            {features.map((item, index) => (
+              <div className="feature-item" key={index}>
+                <CheckCircle2 size={16} className="icon" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
-          <div className="mini-specs-row">
-           
-          </div>
-          <div className="compact-pricing-vault">
-            <div className="price-stack">
-               <span className="old-val">Value: <del>₹45,000</del></span>
-               <div className="price-row">
-                  <span className="new-val">₹29,999</span>
-                  <span className="off-tag">SAVE 33%</span>
-               </div>
+
+          <div className="price-box">
+            <div className="price-stack-combo" style={{ display: 'flex', flexDirection: 'column' }}>
+                <span className="old-val" style={{ textDecoration: 'line-through', color: '#94a3b8', fontSize: '14px' }}>Value: ₹45,000</span>
+                <h2 style={{ marginTop: '5px' }}>₹29,999 <span style={{ fontSize: '14px', color: '#84cc16' }}>(SAVE 33%)</span></h2>
             </div>
+            <span className="discount">Limited Time Professional Deal</span>
+            <p>Bonus: Commercial Vastu Checklist Included</p>
           </div>
-          <div className="compact-action-group">
-            <button className="btn-syllabus-mini">SYLLABUS</button>
-            <button className="btn-enroll-mini">
-              ENROLL NOW <ArrowRight size={18} />
+
+          <div className="btn-group">
+            <button className="outline">View Syllabus</button>
+            <button className="primary">
+              Enroll Now <ArrowRight size={18} />
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* --- SECTION 2: NEW PROFESSIONAL STUDIO VIDEO SECTION --- */}
-      <section className="pro-video-section">
-        <div className="section-header-centered">
-          <span className="eyebrow-text">COURSE PREVIEW</span>
-          <h2 className="section-title-large">Become a <span className="gold-gradient-text">Holistic Expert</span></h2>
-          <p className="section-subtitle-text">Watch the trailer to see how this combo provides 360-degree spiritual solutions by aligning Space Energy with Time Logic.</p>
-        </div>
-
-        <div className="pro-video-grid">
-          {/* Left: Cinematic Video Player */}
-          <div className="video-column-left">
-            <div className="video-glow-aura"></div>
-            <div className="video-studio-frame">
-              <div className="aspect-ratio-box">
-                <iframe 
-                  src="https://www.youtube.com/embed/YOUR_COMBO_VIDEO_ID" 
-                  title="Combo Masterclass Preview" 
-                  frameBorder="0" 
-                  allowFullScreen>
-                </iframe>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Premium Impact Cards */}
-          <div className="video-column-right">
-            <div className="impact-card-premium">
-              <div className="impact-icon-box"><Zap size={22} /></div>
-              <div className="impact-content">
-                <h4>Double Income Potential</h4>
-                <p>Scale your consulting business by offering dual expertise to every client.</p>
-              </div>
-            </div>
-
-            <div className="impact-card-premium">
-              <div className="impact-icon-box"><ShieldCheck size={22} /></div>
-              <div className="impact-content">
-                <h4>Deep Root Analysis</h4>
-                <p>Identify if the block is in the Birth Chart or the Living Space with 100% precision.</p>
-              </div>
-            </div>
-
-            <div className="bonus-dark-callout">
-               <div className="bonus-badge"><Star size={14} fill="#bf953f" color="#bf953f" /> BONUS</div>
-               <p><strong>Commercial Vastu Checklist</strong> & Advanced Remedies Guide Included.</p>
-            </div>
           </div>
         </div>
       </section>
 
-    </div>
+      
+      <section className="video-section">
+        <div className="heading">
+          <p className="sub">COURSE PREVIEW</p>
+          <h2>
+            Align Space & Time, <span>Change Destinies</span>
+          </h2>
+        </div>
+
+        <div className="video-layout">
+          
+          <div className="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_COMBO_VIDEO_ID"
+              title="Combo Masterclass Preview"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          
+          <div className="benefits">
+            {benefits.map((item, index) => (
+              <div className="card" key={index}>
+                <div className="icon-box">
+                  {item.icon}
+                </div>
+                <div className="text">
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    </main>
   );
 };
 

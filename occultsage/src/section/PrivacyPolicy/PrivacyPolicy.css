@@ -1,20 +1,16 @@
-.pp-container {
-    background-color: #f4f7f6; /* Halka gray background taaki card pop kare */
-    padding: 120px 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.pp-wrapper {
+    background-color: #f8fafc; 
+    padding: 80px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.pp-card {
-    background-color: #ffffff; /* Pura White Background */
+.pp-container {
     max-width: 900px;
-    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
     padding: 60px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow */
-    border-top: 5px solid #1a2e4b; /* Navy Blue Top border */
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.05);
 }
 
 .pp-header {
@@ -23,79 +19,118 @@
 }
 
 .pp-header h1 {
-    font-size: 38px;
-    color: #1a2e4b; /* Navy Blue */
+    font-family: 'Marcellus', serif;
+    font-size: 3rem;
+    color: #1a2e4b; 
     margin-bottom: 10px;
 }
 
 .pp-header h1 span {
-    color: #98ff1a; /* Neon Green highlight */
-    background: #1a2e4b;
-    padding: 0 10px;
-    border-radius: 5px;
+    color: #d4af37; 
 }
 
-.pp-header p {
-    color: #666;
-    font-style: italic;
+.pp-last-updated {
+    font-size: 0.9rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pp-divider {
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    margin: 20px auto 0;
+}
+
+.pp-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 60px;
+    padding: 30px;
+    background: #f1f5f9;
+    border-left: 4px solid #1a2e4b;
 }
 
 .pp-section {
-    margin-bottom: 35px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
-.pp-section h2 {
+.section-number {
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;
+    color: #d4af37;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.section-text h2 {
+    font-size: 1.4rem;
     color: #1a2e4b;
-    font-size: 22px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #98ff1a; /* Green underline */
-    display: inline-block;
+    font-weight: 700;
 }
 
-.pp-section p {
-    color: #444;
+.section-text p {
     line-height: 1.8;
-    font-size: 16px;
+    color: #475569;
+    margin-bottom: 15px;
 }
 
-.pp-section ul {
-    margin-top: 15px;
+.section-text ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-.pp-section li {
-    margin-bottom: 10px;
-    color: #444;
-    padding-left: 25px;
+.section-text ul li {
     position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #475569;
 }
 
-.pp-section li::before {
-    content: '◈'; /* Spiritual icon bullet */
-    color: #98ff1a;
+.section-text ul li::before {
+    content: "→";
     position: absolute;
     left: 0;
+    color: #d4af37;
     font-weight: bold;
 }
 
-.pp-contact {
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
+.pp-contact-card {
+    margin-top: 60px;
+    padding: 40px;
+    background: #1a2e4b;
+    color: white;
+    border-radius: 15px;
 }
 
-.pp-contact-info p {
-    margin: 8px 0;
-    font-weight: 500;
+.pp-contact-card h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
 }
 
-/* Mobile Responsive */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #d4af37;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .pp-card {
-        padding: 30px 20px;
-    }
-    .pp-header h1 {
-        font-size: 28px;
-    }
+    .pp-container { padding: 30px; }
+    .pp-header h1 { font-size: 2.2rem; }
+    .pp-section { flex-direction: column; gap: 10px; }
 }

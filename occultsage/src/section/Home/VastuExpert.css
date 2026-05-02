@@ -1,171 +1,171 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
 
-.vastu-section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
+.vastu-section-premium {
+    padding: 80px 0;
     background-color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.container-refined {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-.vastu-header-flex {
+.vastu-flex-box {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 50px;
-    margin-bottom: 70px;
 }
 
-.vastu-image-wrapper {
+/* Content Styling */
+.vastu-info-side { flex: 1.2; }
+
+.badge-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(10, 25, 47, 0.05);
+    color: #0a192f;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.gold-text { color: #ffca28; }
+
+.heading-main {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: #0a192f;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.text-gold { color: #ffca28; }
+
+.desc-main {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.features-grid-refined {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-card-mini { display: flex; gap: 10px; }
+
+.icon-gold { color: #ffca28; flex-shrink: 0; }
+
+.feature-text h4 {
+    font-size: 0.95rem;
+    color: #0a192f;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.feature-text p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.btn-navy-gold {
+    background: #0a192f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-navy-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(10, 25, 47, 0.2);
+}
+
+
+.vastu-media-side { flex: 0.8; } 
+
+.video-container-refined {
     width: 100%;
-    max-width: 320px;
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-}
-
-.vastu-main-card {
-    aspect-ratio: 10/7;
-    background-color: #F3F0E9;
-    border-radius: 12px;
+    aspect-ratio: 1 / 1; 
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background: #000;
+    box-shadow: 0 20px 40px rgba(10, 25, 47, 0.1);
 }
 
-.vastu-main-card img {
+.video-trigger-box {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.video-thumb-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.vastu-play-overlay {
+.overlay-minimal {
     position: absolute;
     inset: 0;
+    background: rgba(10, 25, 47, 0.2);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.vastu-play-btn {
-    width: 65px;
-    height: 65px;
-    background: rgba(255, 255, 255, 0.85);
+.play-btn-modern {
+    width: 60px;
+    height: 60px;
+    background: #ffca28;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.vastu-play-btn:hover {
-    background: #ffffff;
-    transform: scale(1.1);
-}
-
-.vastu-play-icon {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 18px solid #444;
-    margin-left: 5px;
-}
-
-.vastu-bg-shape {
+.name-tag-floating {
     position: absolute;
-    top: 30px;
-    right: -20px;
-    width: 100%;
-    height: 100%;
-    background-color: #F3F0E9;
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.6;
-}
-
-
-.vastu-content-side {
-    width: 100%;
-}
-
-.vastu-content-side h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    bottom: 15px;
+    left: 15px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    color: #111;
-}
-
-.vastu-content-side h1 span {
-    color: #000;
-    font-weight: 800;
-}
-
-.vastu-intro-p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.vastu-highlight-p {
-    font-weight: 600;
-    color: #222;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-
-.vastu-tips-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.vastu-tip-item {
+    color: #0a192f;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.vastu-lotus-icon-box {
-    flex-shrink: 0;
-}
-
-.vastu-tip-text h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 10px;
-}
-
-.vastu-tip-text p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-}
+.iframe-wrapper-final { width: 100%; height: 100%; }
+.iframe-wrapper-final iframe { width: 100%; height: 100%; border: none; }
 
 
-.vastu-footer-box {
-    margin-top: 80px;
-    text-align: center;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 40px;
-}
-
-
-@media (min-width: 768px) {
-    .vastu-header-flex {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .vastu-image-wrapper { width: 35%; }
-    .vastu-content-side { width: 65%; }
-    .vastu-tips-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 991px) {
+    .vastu-flex-box { flex-direction: column; text-align: center; }
+    .features-grid-refined { text-align: left; }
+    .desc-main, .btn-navy-gold { margin-left: auto; margin-right: auto; }
+    .video-container-refined { max-width: 400px; margin: 0 auto; }
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for arrows
+import { useNavigate } from 'react-router-dom'; 
+import { ChevronLeft, ChevronRight } from 'lucide-react'; 
 import './Services.css';
 
 const Services = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(4);
+  const navigate = useNavigate(); 
 
   const services = [
     { title: 'Astrology', img: '/astrology.jpg', desc: 'Get more profound insights into your life with the help of expert scientific astrology.' },
@@ -39,6 +41,11 @@ const Services = () => {
     return () => clearInterval(timer);
   }, [currentIndex, itemsToShow]);
 
+  
+  const handleConsultClick = () => {
+    navigate('/consultancy');
+  };
+
   return (
     <section className="services-section">
       <div className="services-header">
@@ -49,9 +56,12 @@ const Services = () => {
       </div>
 
       <div className="carousel-main-container">
-        {/* Glassmorphism Navigation Buttons */}
-        <button className="nav-btn prev" onClick={prevSlide}><ChevronLeft size={24} /></button>
-        <button className="nav-btn next" onClick={nextSlide}><ChevronRight size={24} /></button>
+        <button className="nav-btn prev" onClick={prevSlide} aria-label="Previous">
+          <ChevronLeft size={28} />
+        </button>
+        <button className="nav-btn next" onClick={nextSlide} aria-label="Next">
+          <ChevronRight size={28} />
+        </button>
 
         <div className="carousel-view-window">
           <div 
@@ -68,11 +78,13 @@ const Services = () => {
                   <div className="image-container-modern">
                     <img src={item.img} alt={item.title} className="service-img" />
                     <div className="img-overlay"></div>
+                    <div className="service-badge">{item.title.split(' ')[0]}</div>
                   </div>
                   <div className="card-content">
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
-                    <a href="#" className="service-more-btn">
+                    
+                    <a href="#" onClick={(e) => { e.preventDefault(); navigate('/consultancy'); }} className="service-more-btn">
                       Explore More <span>→</span>
                     </a>
                   </div>
@@ -83,9 +95,12 @@ const Services = () => {
         </div>
       </div>
 
-      <button className="master-action-btn">
-        Consult Acharya Pankaj
-      </button>
+      <div className="action-footer">
+        
+        <button className="master-action-btn" onClick={handleConsultClick}>
+          Consult Acharya Pankaj
+        </button>
+      </div>
     </section>
   );
 };

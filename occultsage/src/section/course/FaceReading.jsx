@@ -1,122 +1,150 @@
-import React, { useEffect } from 'react';
-import { ShieldCheck, Star, Award, ArrowRight, CheckCircle2, Globe, User, Clock, Scan, Sparkles, UserCircle, Focus } from 'lucide-react';
-import './FaceReading.css'; 
+import React, { useEffect } from "react";
+import {
+  Star,
+  ShieldCheck,
+  Zap,
+  ArrowRight,
+  CheckCircle2,
+  Users,
+  Scan,
+  UserCircle,
+  Focus,
+  Eye
+} from "lucide-react";
+import "../../Styles/Courses.css";
 
 const FaceReading = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  const features = [
+    "Facial Feature Mapping",
+    "Micro-expression Detection",
+    "Forehead & Eye Analysis",
+    "Personality Profiling",
+  ];
+
+  const benefits = [
+    {
+      icon: <Scan size={22} />,
+      title: "Feature Analysis",
+      desc: "Decode personality traits by analyzing eyes, nose, and jawline shapes.",
+    },
+    {
+      icon: <Focus size={22} />,
+      title: "Hidden Intentions",
+      desc: "Learn to spot micro-expressions that reveal a person's true thoughts.",
+    },
+    {
+      icon: <UserCircle size={22} />,
+      title: "Relationship Mapping",
+      desc: "Understand compatibility and trustworthiness through facial structure.",
+    },
+  ];
+
   return (
-    <div className="premium-page-wrapper">
+    <main className="premium-wrapper">
+
       
-      {/* --- SECTION 1: COMPACT HERO CARD --- */}
-      <div className="compact-hero-card">
-        <div className="compact-left-branding">
-          <div className="glass-inner-card">
-             <div className="mini-badge">ADVANCED</div>
-             <h2 className="mini-brand-title">Face<br/>Analysis</h2>
-             <div className="mini-instructor-frame">
-                <img src="/FaceReading.png" alt="Face Reading Expert" className="mini-instructor-img" />
-             </div>
-             <div className="mini-cert-tag">SAMUDRIKA SHASTRA</div>
+      <section className="hero-card">
+
+        
+        <div className="hero-left">
+          <div className="hero-glass">
+            <span className="badge">ADVANCED SAMUDRIKA</span>
+            <h2 className="course-tag">FACE</h2>
+            
+            <div className="image-box">
+              
+              <img src="/FaceReading.png" alt="Face Reading Course" />
+            </div>
+
+            <p className="cert">SAMUDRIKA SHASTRA SYSTEM</p>
           </div>
         </div>
 
-        <div className="compact-right-details">
-          <div className="compact-status-row">
-            <span className="verify-tag" style={{background: '#f1f5f9', padding: '4px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: 'bold'}}>CHARACTER DECODING</span>
-            <div className="mini-rating" style={{display: 'flex', alignItems: 'center', gap: '5px', marginLeft: '15px'}}>
-              <Star size={12} fill="#84cc16" color="#84cc16" /> 
-              <span style={{fontSize: '12px', fontWeight: '600'}}>4.7 (110+ Students)</span>
+        
+        <div className="hero-right">
+          <div className="top-row">
+            <span className="verified">PHYSIOGNOMY EXPERT</span>
+            <div className="rating">
+              <Star size={14} fill="#84cc16" color="#84cc16" />
+              <span>4.9 (210+ Students)</span>
             </div>
           </div>
 
-          <h1 className="compact-title">
-            Face Reading: <span className="gold-grad">The Mirror of Soul</span>
+          <h1 className="title">
+            Face Reading <span>The Mirror of Soul</span>
           </h1>
 
-          <p className="compact-desc" style={{fontSize: '14px', color: '#64748b', fontWeight: '600', letterSpacing: '1px', marginBottom: '15px'}}>
-            FACIAL FEATURES <span>+</span> SHAPES <span>+</span> EXPRESSIONS
+          <p className="subtitle">
+            Identify anyone's character, destiny, and health status just by looking at their 
+            facial features. Master the ancient art of Samudrika Shastra for modern success.
           </p>
 
-          <div className="compact-points-grid">
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> 5 Vital Organs Mapping</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Forehead & Luck Lines</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Eye Shapes & Intentions</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Micro-Expression Cues</div>
+          <div className="features">
+            {features.map((item, index) => (
+              <div className="feature-item" key={index}>
+                <CheckCircle2 size={16} className="icon" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
 
-          <div className="mini-specs-bar">
-            <div className="spec-unit"><Globe size={16} /> Hindi</div>
-            <div className="spec-unit"><User size={16} /> Acharya Pankaj Ji</div>
-            <div className="spec-unit"><Clock size={16} /> Lifetime Access</div>
+          <div className="price-box">
+            <h2>₹9,999</h2>
+            <span className="discount">Bestseller Masterclass</span>
+            <p>Includes Bonus Micro-Expression Guide</p>
           </div>
 
-          <div className="compact-price-box">
-             <div className="price-stack" style={{display: 'flex', alignItems: 'baseline', gap: '10px'}}>
-                <span className="p-actual">₹8,999</span>
-                <span className="p-off">EXCLUSIVE PRICE</span>
-             </div>
-          </div>
-
-          <div className="compact-button-group">
-            <button className="btn-syllabus-mini">SYLLABUS</button>
-            <button className="btn-enroll-mini">
-              ENROLL NOW <ArrowRight size={18} />
+          <div className="btn-group">
+            <button className="outline">View Syllabus</button>
+            <button className="primary">
+              Enroll Now <ArrowRight size={18} />
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* --- SECTION 2: SIDE-BY-SIDE VIDEO & DESCRIPTION --- */}
-      <section className="compact-video-section">
-        <div className="section-header-mini">
-           <span className="eyebrow">COURSE PREVIEW</span>
-           <h2 className="preview-title-text">Decode Personality at a <span className="gold-grad">Glance</span></h2>
+      
+      <section className="video-section">
+        <div className="heading">
+          <p className="sub">COURSE PREVIEW</p>
+          <h2>
+            Read the Face, <span>Know the Person</span>
+          </h2>
         </div>
 
-        <div className="video-content-grid">
-           {/* Left: Video Player */}
-           <div className="video-player-column">
-              <div className="video-aura-effect"></div>
-              <div className="video-studio-box">
-                 <iframe 
-                    src="https://www.youtube.com/embed/YOUR_FACEREADING_VIDEO_ID" 
-                    title="Face Reading Course Preview"
-                    frameBorder="0"
-                    allowFullScreen
-                 ></iframe>
-              </div>
-           </div>
+        <div className="video-layout">
+          {/* VIDEO PLAYER */}
+          <div className="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_FACE_VIDEO_ID"
+              title="Face Reading Course Preview"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
 
-           {/* Right: Feature Cards */}
-           <div className="video-description-column">
-              <div className="compact-desc-card">
-                 <div className="desc-icon-box"><Scan size={20} /></div>
-                 <div className="desc-info">
-                    <h4>3-Zone Analysis</h4>
-                    <p>Learn to divide the face into three zones to understand past, present, and future luck.</p>
-                 </div>
+          
+          <div className="benefits">
+            {benefits.map((item, index) => (
+              <div className="card" key={index}>
+                <div className="icon-box">
+                  {item.icon}
+                </div>
+                <div className="text">
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
               </div>
-
-              <div className="compact-desc-card">
-                 <div className="desc-icon-box"><Focus size={20} /></div>
-                 <div className="desc-info">
-                    <h4>Mole Reading Bonus</h4>
-                    <p>Identify the significance of moles on different parts of the face and their impact.</p>
-                 </div>
-              </div>
-
-              <div className="mini-consultant-badge">
-                 <UserCircle size={18} style={{color: '#bf953f'}} />
-                 <span>Bonus: Interview & Business Negotiation Mastery</span>
-              </div>
-           </div>
+            ))}
+          </div>
         </div>
       </section>
 
-    </div>
+    </main>
   );
 };
 

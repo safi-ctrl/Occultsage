@@ -1,121 +1,159 @@
-import React, { useEffect } from 'react';
-import { ShieldCheck, Star, Zap, Award, Download, ArrowRight, CheckCircle2, Globe, User, Clock, Sparkles } from 'lucide-react';
-import './Astrologyvedic.css'; 
+import React, { useEffect } from "react";
+import {
+  Star,
+  ShieldCheck,
+  Zap,
+  ArrowRight,
+  CheckCircle2,
+  Users,
+} from "lucide-react";
+import "../../Styles/Courses.css"; 
 
-const Astrologyvedic = () => {
+const AstrologyVedic = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  const features = [
+    "Vedic Astrology Fundamentals",
+    "KP System Precision",
+    "Nadi Astrology Techniques",
+    "Real Chart Predictions",
+  ];
+
+  const benefits = [
+    {
+      icon: <ShieldCheck size={22} />,
+      title: "Certified Astrology Training",
+      desc: "Internationally recognized certification with practical knowledge.",
+    },
+    {
+      icon: <Zap size={22} />,
+      title: "Accurate Prediction Skills",
+      desc: "Learn advanced techniques for precise timing & predictions.",
+    },
+    {
+      icon: <Users size={22} />,
+      title: "Consultant Level Training",
+      desc: "Become a professional astrologer and start consultations.",
+    },
+  ];
+
   return (
-    <div className="premium-page-wrapper">
+    <main className="premium-wrapper">
+
       
-      {/* --- SECTION 1: COMPACT HERO CARD --- */}
-      <div className="compact-hero-card">
-        <div className="compact-left-branding">
-          <div className="glass-inner-card">
-             <div className="mini-badge">BEST SELLER</div>
-             <h2 className="mini-brand-title">Astro<br/>Mastery</h2>
-             <div className="mini-instructor-frame">
-                <img src="/Astrovedic.png" alt="Acharya Pankaj Ji" className="mini-instructor-img" />
-             </div>
-             <div className="mini-cert-tag">3-IN-1 COMBO</div>
+      <section className="hero-card">
+
+        
+        <div className="hero-left">
+          <div className="hero-glass">
+
+            <span className="badge">BEST SELLER</span>
+
+            <h2 className="course-tag">ASTROLOGY</h2>
+
+            <div className="image-box">
+              <img src="/Astrovedic.png" alt="Astrology Course" />
+            </div>
+
+            <p className="cert">VEDIC + KP + NADI</p>
+
           </div>
         </div>
 
-        <div className="compact-right-details">
-          <div className="compact-status-row">
-            <span className="verify-tag">PRO CERTIFIED</span>
-            <div className="mini-rating">
-              <Star size={12} fill="#84cc16" color="#84cc16" /> 
+        
+        <div className="hero-right">
+
+          <div className="top-row">
+            <span className="verified">PRO CERTIFIED</span>
+
+            <div className="rating">
+              <Star size={14} fill="#84cc16" color="#84cc16" />
               <span>4.8 (120+ Students)</span>
             </div>
           </div>
 
-          <h1 className="compact-title">
-            Astrology Masterclass: <span className="gold-grad">Basic to Pro</span>
+          <h1 className="title">
+            Astrology Masterclass <span>Basic to Pro</span>
           </h1>
 
-          <p className="compact-desc">VEDIC <span>+</span> KP <span>+</span> NADI ASTROLOGY</p>
+          <p className="subtitle">
+            Master Vedic, KP, and Nadi astrology systems to make highly accurate
+            life predictions and build a professional astrology career.
+          </p>
 
-          <div className="compact-points-grid">
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Vedic Logic</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> KP Precision</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Nadi Speed</div>
-            <div className="point-item"><CheckCircle2 size={16} className="green-text" /> Practical Rules</div>
+          <div className="features">
+            {features.map((item, index) => (
+              <div className="feature-item" key={index}>
+                <CheckCircle2 size={16} className="icon" />
+                <span>{item}</span>
+              </div>
+            ))}
           </div>
 
-          <div className="mini-specs-bar">
-            <div className="spec-unit"><Globe size={16} /> Hindi</div>
-            <div className="spec-unit"><User size={16} /> Acharya Pankaj Ji</div>
-            <div className="spec-unit"><Clock size={16} /> Lifetime</div>
+          <div className="price-box">
+            <h2>₹24,999</h2>
+            <span className="discount">30% OFF - Limited Time</span>
+            <p>Includes Consultant Training + Case Studies</p>
           </div>
 
-          <div className="compact-price-box">
-             <div className="price-stack">
-                <span className="p-actual">₹24,999</span>
-                <span className="p-off">30% OFF</span>
-             </div>
-          </div>
+          <div className="btn-group">
+            <button className="outline">View Syllabus</button>
 
-          <div className="compact-button-group">
-            <button className="btn-syllabus-mini">SYLLABUS</button>
-            <button className="btn-enroll-mini">
-              ENROLL NOW <ArrowRight size={18} />
+            <button className="primary">
+              Enroll Now <ArrowRight size={18} />
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* --- SECTION 2: SIDE-BY-SIDE VIDEO & DESCRIPTION --- */}
-      <section className="compact-video-section">
-        <div className="section-header-mini">
-           <span className="eyebrow">COURSE PREVIEW</span>
-           <h2 className="preview-title-text">Scientific Predictive <span className="gold-grad">Mastery</span></h2>
-        </div>
-
-        <div className="video-content-grid">
-           {/* Left: Video Player */}
-           <div className="video-player-column">
-              <div className="video-aura-effect"></div>
-              <div className="video-studio-box">
-                 <iframe 
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                    title="Astro Masterclass Overview"
-                    frameBorder="0"
-                    allowFullScreen
-                 ></iframe>
-              </div>
-           </div>
-
-           {/* Right: Feature Cards */}
-           <div className="video-description-column">
-              <div className="compact-desc-card">
-                 <div className="desc-icon-box"><Sparkles size={20} /></div>
-                 <div className="desc-info">
-                    <h4>Precision Timing</h4>
-                    <p>Learn to pinpoint exact event dates using KP & Nadi logic.</p>
-                 </div>
-              </div>
-
-              <div className="compact-desc-card">
-                 <div className="desc-icon-box"><ShieldCheck size={20} /></div>
-                 <div className="desc-info">
-                    <h4>ISO 9001 Certified</h4>
-                    <p>Internationally recognized certification valid in 45+ countries.</p>
-                 </div>
-              </div>
-
-              <div className="mini-consultant-badge">
-                 <Award size={18} className="gold-text" />
-                 <span>Consultant Training Included</span>
-              </div>
-           </div>
         </div>
       </section>
 
-    </div>
+      
+      <section className="video-section">
+
+        <div className="heading">
+          <p className="sub">COURSE PREVIEW</p>
+          <h2>
+            Scientific Predictive <span>Astrology</span>
+          </h2>
+        </div>
+
+        <div className="video-layout">
+
+          
+          <div className="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Astrology Course Preview"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          
+          <div className="benefits">
+            {benefits.map((item, index) => (
+              <div className="card" key={index}>
+
+                <div className="icon-box">
+                  {item.icon}
+                </div>
+
+                <div className="text">
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </main>
   );
 };
 
-export default Astrologyvedic;
+export default AstrologyVedic;

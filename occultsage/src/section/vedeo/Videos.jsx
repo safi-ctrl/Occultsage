@@ -4,8 +4,8 @@ import './Video.css';
 
 const Videos = () => {
   const [featuredVideo, setFeaturedVideo] = useState({
-    id: "your-main-video-id", 
-    title: "Vastu Shastra Foundation Masterclass",
+    id: "HtQDTq7g8Jw", 
+    title: "Whole House Vastu in Three steps",
     description: "Learn the core principles of Vastu Shastra for modern homes and offices."
   });
 
@@ -18,7 +18,7 @@ const Videos = () => {
 
   return (
     <div className="video-page-container">
-      {/* Header Section */}
+      
       <div className="video-header">
         <h1>
           Popular <span>Learning Videos</span>
@@ -28,7 +28,7 @@ const Videos = () => {
         </p>
       </div>
 
-      {/* Main Featured Video Section */}
+      
       <div className="featured-video-section">
         <div className="video-player-wrapper">
           <iframe
@@ -47,12 +47,12 @@ const Videos = () => {
           <h2>{featuredVideo.title}</h2>
           <p>{featuredVideo.description}</p>
           <button className="enroll-btn">
-            Enroll in Full Course
+            Explore More On Youtube
           </button>
         </div>
       </div>
 
-      {/* Popular Videos Grid */}
+      
       <div className="video-grid-container">
         <h3 className="grid-title">
           <Play size={24} /> Other Popular Uploads

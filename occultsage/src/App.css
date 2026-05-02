@@ -1,4 +1,4 @@
-/* Poori website se horizontal scroll hatane ke liye */
+
 html, body {
   max-width: 100%;
   overflow-x: hidden; 
@@ -7,6 +7,9 @@ html, body {
 }
 
 #root {
-  overflow-x: hidden;
+  
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './AddBlog.css'; // Iska CSS niche diya hai
+import './AddBlog.css'; 
 
 const AddBlog = () => {
     const [formData, setFormData] = useState({
         title: '',
         excerpt: '',
         doc_link: '',
-        category: 'Astrology', // Default category
+        category: 'Astrology', 
         image: '',
         isApproved: true 
     });

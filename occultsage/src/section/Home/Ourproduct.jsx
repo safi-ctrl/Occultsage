@@ -9,7 +9,7 @@ const Ourproduct = () => {
       price: "399.00", 
       tag: "Trending", 
       img: "https://malyam.com/cdn/shop/files/havancup.jpg?v=1753856068",
-      link: "https://malyam.com/collections/best-selling-test/products/hawan-cup" // Example link
+      link: "https://malyam.com/collections/best-selling-test/products/hawan-cup" 
     },
     { 
       id: 2, 
@@ -76,7 +76,7 @@ const Ourproduct = () => {
                 <h4>{product.name}</h4>
                 <p className="malyam-price">₹{product.price}</p>
                 
-                {/* Button ko anchor tag mein wrap kiya */}
+                
                 <a href={product.link} target="_blank" rel="noreferrer">
                   <button className="malyam-view-btn">View Details</button>
                 </a>

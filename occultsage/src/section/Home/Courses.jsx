@@ -1,72 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
+import { ChevronRight, ArrowUpRight, Users, ArrowRight } from 'lucide-react';
 import './Courses.css';
 
-const coursesData = [
-  { id: 1, name: 'Numerology Mastery', img: '/Neomerologyy.png', tag: 'Bestseller', path: '/course/numerology' },
-  { id: 2, name: 'Vedic Astrology', img: '/astrologyvedic.jpg', tag: 'Expert', path: '/course/astrologyvedic' },
-  { id: 3, name: 'Astro + Vastu Combo', img: '/astrovastu.jpg', tag: 'Combo', path: '/course/astrologyvastucombo' },
-  { id: 4, name: 'Palmistry Science', img: '/Palmistry.jpg', tag: 'New', path: '/course/palmistry' },
-  { id: 5, name: 'Face Reading Pro', img: '/facereading.jpg', tag: 'Special', path: '/course/facereading' },
-  { id: 6, name: 'Watch Reading', img: '/watechreading.jpg', tag: 'Unique', path: '/course/watchreading' },
-  { id: 7, name: 'Motion Reading', img: '/motionreading.jpg', tag: 'Mastery', path: '/course/motionreading' },
-  { id: 8, name: 'Tarot Card', img: '/Tarotcard.jpg', tag: 'Diploma', path: '/course/tarotcard' },
-];
-
 const Courses = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
+  const coursesData = [
+    { id: 1, name: 'Numerology Mastery', img: '/Neomerologyy.png', tag: 'Bestseller', path: '/course/numerology', students: '1240' },
+    { id: 2, name: 'Vedic Astrology', img: '/astrologyvedic.jpg', tag: 'Expert', path: '/course/astrologyvedic', students: '850' },
+    { id: 3, name: 'Astro + Vastu Combo', img: '/astrovastu.jpg', tag: 'Combo', path: '/course/astrologyvastucombo', students: '2100' },
+    { id: 4, name: 'Palmistry Science', img: '/Palmistry.jpg', tag: 'New', path: '/course/palmistry', students: '540' },
+    { id: 5, name: 'Watch Reading', img: '/watechreading.jpg', tag: 'Professional', path: '/course/watchreading', students: '980' },
+    { id: 6, name: 'Tarot Card Secrets', img: '/Tarotcard.jpg', tag: 'Popular', path: '/course/tarotcard', students: '720' },
+    { id: 7, name: 'Face Reading', img: '/facereading.jpg', tag: 'Elite', path: '/course/facereading', students: '430' },
+    { id: 8, name: 'Motion Reading', img: '/motionreading.jpg', tag: 'Advanced', path: '/course/motionreading', students: '610' },
+  ];
 
   return (
-    <section className="courses-section">
-      <div className="section-title-box">
-        <span className="theme-green-text">EXPLORE MODULES</span>
-        <h2 className="theme-navy-title">Our <span className="white-text">Elite Courses</span></h2>
-      </div>
-
-      <div className="courses-grid-8">
-        {coursesData.map((course, index) => (
-          <motion.div 
-            key={course.id}
-            className="split-course-card"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            viewport={{ once: true }}
-            
-            style={{ cursor: 'pointer' }}
-            onClick={() => navigate(course.path)} 
-          >
+    <section className="courses-section-wrapper">
+      <div className="container">
+        
+        {/* Header Section */}
+        <div className="header-flex-container">
+          <div className="title-stack">
+            <span className="badge-text">TRANSFORM YOUR LIFE</span>
+            <h2 className="elite-title">Explore Our <span className="gold-text">Elite Courses</span></h2>
+          </div>
           
-            <div className="card-image-wrapper">
-              <img src={course.img} alt={course.name} className="course-thumb" />
-              <div className="tag-overlay">{course.tag}</div>
-              <div className="green-gradient-overlay"></div>
-            </div>
+          <motion.button 
+            whileHover={{ x: 5 }}
+            className="view-all-redirect-btn" 
+            onClick={() => navigate('/ExploreCourses')}
+          >
+            View All Courses <ChevronRight size={20} />
+          </motion.button>
+        </div>
 
-           
-            <div className="card-content-area">
-              <div className="rating-row">
-                <Star size={12} fill="#84cc16" color="#84cc16" />
-                <span>4.9 Mastery</span>
-              </div>
-              <h3 className="course-card-name">{course.name}</h3>
-              <p className="course-card-p">Comprehensive guide from basic to advanced levels with live case studies.</p>
-              
-              <motion.button 
-                whileHover={{ gap: '12px' }}
-                className="enroll-btn-theme"
-                onClick={(e) => {
-                  e.stopPropagation(); 
-                  navigate(course.path);
-                }}
+        {/* Courses Container */}
+        <div className="courses-scroll-container">
+          <div className="courses-responsive-grid">
+            {coursesData.map((course, index) => (
+              <motion.div 
+                key={course.id}
+                className="premium-split-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                onClick={() => navigate(course.path)}
               >
-                ENROLL NOW <ArrowRight size={16} />
-              </motion.button>
-            </div>
-          </motion.div>
-        ))}
+                <div className="card-top-visual">
+                  <img src={course.img} alt={course.name} />
+                  <div className="floating-tag">{course.tag}</div>
+                  <div className="hover-overlay">
+                    <ArrowUpRight color="white" size={32} />
+                  </div>
+                </div>
+
+                <div className="card-details-box">
+                  <div className="meta-info">
+                    <span className="seats-left">LIMITED SEATS</span>
+                    <span className="user-stats"><Users size={14} /> {course.students}</span>
+                  </div>
+                  
+                  <h3 className="course-name-text">{course.name}</h3>
+                  <p className="course-desc-text">Master the divine sciences with live case studies and mentorship.</p>
+                  
+                  <div className="card-action-footer">
+                    <span className="rating-stars">★★★★★</span>
+                    <button 
+                      className="enroll-btn-pro"
+                      onClick={(e) => {
+                        e.stopPropagation(); 
+                        navigate(course.path);
+                      }}
+                    >
+                      Enroll Now <ArrowRight size={16} className="btn-icon" />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

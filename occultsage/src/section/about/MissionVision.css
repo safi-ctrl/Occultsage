@@ -105,36 +105,34 @@
 .vision-border { border-top: 4px solid #bf9b30; }
 
 
-/* =============================================
-   MOBILE-ONLY RESPONSIVE (1 ROW, 2 COLUMNS)
-   ============================================= */
+
 
 @media (max-width: 650px) {
-  /* Container ko compact kiya */
+  
   .mv-container-wide {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* Force 2 Columns */
-    gap: 10px !important; /* Cards ke beech space kam ki */
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 10px !important; 
     padding: 0 10px !important;
   }
 
-  /* Card ka size aur padding adjust ki */
+  
   .mv-item-card {
     padding: 15px 12px !important;
-    min-height: 180px !important; /* Height choti ki mobile ke liye */
+    min-height: 180px !important; 
     border-radius: 12px !important;
-    justify-content: flex-start !important; /* Content upar se shuru ho */
+    justify-content: flex-start !important; 
   }
 
-  /* Top Row (Icon aur Label) */
+  
   .mv-top-row {
     margin-bottom: 12px !important;
-    flex-direction: column !important; /* Mobile par icon upar, label niche */
+    flex-direction: column !important; 
     align-items: flex-start !important;
     gap: 5px;
   }
 
-  /* Icon size compact kiya */
+  
   .mv-icon-bg {
     width: 30px !important;
     height: 30px !important;
@@ -142,39 +140,39 @@
     border-radius: 8px !important;
   }
 
-  /* Label chota kiya */
+  
   .mv-label {
     font-size: 7px !important;
     letter-spacing: 1px !important;
   }
 
-  /* Heading (Mission/Vision) */
+  
   .mv-h2 {
-    font-size: 1.1rem !important; /* Text size chota kiya taaki fit ho */
+    font-size: 1.1rem !important; 
     margin-bottom: 6px !important;
     line-height: 1.2 !important;
   }
 
-  /* Paragraph Description */
+  
   .mv-p {
-    font-size: 0.7rem !important; /* Chota font professional lagta hai grid mein */
+    font-size: 0.7rem !important; 
     line-height: 1.3 !important;
     color: #5a6b82;
-    /* Text truncation: Max 4 lines tak limit kiya */
+    
     display: -webkit-box;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  /* Bottom Bar */
+  
   .mv-footer-bar {
-    margin-top: auto !important; /* Hamesha niche rahega */
+    margin-top: auto !important; 
     height: 3px !important;
     width: 20px !important;
   }
 
-  /* Hover effect chota kiya */
+  
   .mv-item-card:hover {
     transform: translateY(-3px) !important;
   }
@@ -184,7 +182,7 @@
   }
 }
 
-/* Extra Small Phones (e.g. iPhone SE) */
+
 @media (max-width: 360px) {
   .mv-container-wide {
     gap: 6px !important;

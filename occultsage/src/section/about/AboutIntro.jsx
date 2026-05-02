@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Compass, ShieldCheck, Home, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom"; 
 import "./aboutintro.css";
 
-const AboutVastu = () => {
+const AboutIntro = () => {
+  const navigate = useNavigate(); 
+
   const features = [
     {
       title: "Ancient Wisdom",
@@ -45,14 +48,25 @@ const AboutVastu = () => {
               We help you create environments that invite positive energy and success.
             </p>
             <div className="hero-btns">
-              <button className="btn-primary">Our Services</button>
-              <button className="btn-outline">Contact Us</button>
+              <button 
+                className="btn-primary" 
+                onClick={() => navigate("/ExploreCourses")}
+              >
+                Our Services
+              </button>
+              
+              
+              <button 
+                className="btn-outline" 
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      
       <section className="features-section">
         <div className="wrapper">
           <div className="section-title">
@@ -84,4 +98,4 @@ const AboutVastu = () => {
   );
 };
 
-export default AboutVastu;
+export default AboutIntro;

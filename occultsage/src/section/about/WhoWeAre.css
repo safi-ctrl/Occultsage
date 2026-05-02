@@ -161,7 +161,7 @@
   border-radius: 12px;
 }
 
-/* --- SMART RESPONSIVE LAYOUT (Mobile & Tablet) --- */
+
 
 @media (max-width: 992px) {
   .who-3d-section {
@@ -169,15 +169,15 @@
   }
 
   .who-card-main {
-    flex-direction: row; /* Desktop jaisa row hi rakha hai */
+    flex-direction: row; 
     max-height: none;
     align-items: stretch;
     border-radius: 20px;
   }
 
-  /* 1. Left Side: Image (Narrowed for Mobile) */
+  
   .who-image-container {
-    flex: 0.4; /* Image ko thoda patla kiya 2 columns fit karne ke liye */
+    flex: 0.4; 
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
@@ -185,8 +185,8 @@
   }
 
   .image-3d-wrapper {
-    max-width: 140px; /* Chota size taki space bache */
-    transform: none; /* Mobile par tilt hata diya clean look ke liye */
+    max-width: 140px; 
+    transform: none; 
   }
 
   .experience-badge {
@@ -201,7 +201,7 @@
     display: block;
   }
 
-  /* 2. Right Side: Text & Stats */
+  
   .who-text-content {
     flex: 0.6;
     padding: 20px 15px;
@@ -209,7 +209,7 @@
   }
 
   .who-heading-3d {
-    font-size: 1.3rem; /* Heading choti ki taki row mein fit ho */
+    font-size: 1.3rem; 
     margin-bottom: 10px;
   }
 
@@ -219,11 +219,11 @@
   }
 
   .p-sub {
-    font-size: 0.75rem; /* Font size chota for compact look */
+    font-size: 0.75rem; 
     line-height: 1.4;
   }
 
-  /* 3. Stats Grid (2 Columns inside the right column) */
+  
   .who-stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -245,7 +245,7 @@
     font-size: 8px;
   }
 
-  /* 4. Button Fix */
+  
   .pro-btn-3d {
     padding: 10px 15px;
     font-size: 0.8rem;
@@ -254,9 +254,9 @@
   }
 }
 
-/* --- Extreme Small Phones (Portrait) --- */
+
 @media (max-width: 550px) {
-  /* Yahan row ko column karna hi behtar hai warna kuch dikhega nahi */
+  
   .who-card-main {
     flex-direction: column;
   }

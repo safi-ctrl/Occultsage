@@ -1,95 +1,103 @@
-import React, { useState } from 'react'; 
-import './VastuExpert.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
+import { Play, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import "./VastuExpert.css";
 
 const VastuExpert = () => {
-  
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [play, setPlay] = useState(false);
+  const navigate = useNavigate(); 
+  const videoId = "iOa4MY5qeis";
 
-
-  const videoId = "iOa4MY5qeis"; 
-
-  const tips = [
-    { title: "Space Balancing and Harmony", description: "Create a living space where all five elements are in perfect alignment, promoting peace and stability.Balanced surroundings not only enhance comfort but also attract positive energy and well-being." },
-    { title: "Professional Consultation is Key", description: "Expert guidance ensures accurate Vastu analysis tailored to your specific needs and space.A professional approach helps avoid costly mistakes and ensures long-term harmony and success." },
-    { title: "Authentic Materials", description: "Using natural and high-quality materials strengthens the flow of positive energy within your spaceAuthenticity in design not only improves aesthetics but also supports long-lasting harmony." },
-    { title: "Entrance and Facing", description: "The entrance of a space plays a crucial role in attracting opportunities and positive vibrations.Correct placement ensures a smooth flow of energy, enhancing prosperity and overall growth." },
-    { title: "Clutter-Free Environment", description: "A clean and organized space allows energy to flow freely without obstacles or negativity.Decluttering your surroundings creates mental clarity, focus, and a sense of calm." },
-    { title: "Directional Intention", description: "Every direction holds unique energy that influences different aspects of life.Aligning activities with the right directions enhances productivity, balance, and success." }
+  const details = [
+    { title: "Balanced Living", desc: "Aligning elements for stability." },
+    { title: "Expert Analysis", desc: "Vastu insights for growth." },
+    { title: "Energy Flow", desc: "Optimize mental focus." },
+    { title: "Smart Direction", desc: "Peak productivity placement." },
   ];
 
+  
+  const handleConsultClick = () => {
+    navigate('/consultancy');
+    
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
-    <section className="vastu-section-container">
-      <div className="vastu-header-flex">
-        
-        <div className="vastu-image-wrapper">
-          <div className="vastu-main-card" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section className="vastu-section-premium">
+      <div className="container-refined">
+        <div className="vastu-flex-box">
+          
+          
+          <div className="vastu-info-side">
+            <div className="badge-modern">
+              <ShieldCheck size={14} className="gold-text" /> 
+              <span>Ancient Wisdom • Modern Science</span>
+            </div>
             
-            {!isPlaying ? (
-             
-              <>
-                <img 
-                  src="/Acharyapankaj.jpeg" 
-                  alt="Acharya Pankaj" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-                <div className="vastu-play-overlay">
-                  <button className="vastu-play-btn" onClick={() => setIsPlaying(true)}>
-                    <div className="vastu-play-icon"></div>
-                  </button>
+            <h2 className="heading-main">
+              Bring Harmony to Your <br />
+              <span className="text-gold">Living Space</span>
+            </h2>
+            
+            <p className="desc-main">
+              Transform your environment into a sanctuary of success. Our expert Vastu 
+              consultations bridge the gap between ancient traditions and modern lifestyle.
+            </p>
+
+            <div className="features-grid-refined">
+              {details.map((item, i) => (
+                <div key={i} className="feature-card-mini">
+                  <div className="icon-gold">
+                    <CheckCircle2 size={18} />
+                  </div>
+                  <div className="feature-text">
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
-              </>
-            ) : (
-             
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                title="Acharya Pankaj Vastu Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{ position: 'absolute', top: 0, left: 0 }}
-              ></iframe>
-            )}
-
-          </div>
-          <div className="vastu-bg-shape"></div>
-        </div>
-
-       
-        <div className="vastu-content-side">
-          <h1>
-            What Does the Vastu Expert <br />
-            <span>Acharya Pankaj</span> Say About Vastu Shastra?
-          </h1>
-          <div className="vastu-text-group">
-            <p className="vastu-intro-p">
-              Vastu Shastra is a powerful ancient Indian science of architecture that balances natural 
-              energies to enhance your well-being, success, and prosperity.
-            </p>
-            <p className="vastu-highlight-p">
-              Here are some valuable tips from one of the best Vastu consultants in India:
-            </p>
-          </div>
-        </div>
-      </div>
-
-      
-      <div className="vastu-tips-grid">
-        {tips.map((tip, index) => (
-          <div key={index} className="vastu-tip-item">
-            <div className="vastu-lotus-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="1.5">
-                <path d="M12 22C12 22 20 18 20 12C20 6 12 2 12 2C12 2 4 6 4 12C4 18 12 22 12 22Z" />
-                <path d="M12 22V12" /><path d="M7 15C7 15 9 13 12 13C15 13 17 15 17 15" />
-              </svg>
+              ))}
             </div>
-            <div className="vastu-tip-text">
-              <h3>{tip.title}</h3>
-              <p>{tip.description}</p>
+
+            
+            <button className="btn-navy-gold" onClick={handleConsultClick}>
+              Book Your Consultation <span>→</span>
+            </button>
+          </div>
+
+          
+          <div className="vastu-media-side">
+            <div className="video-container-refined">
+              {!play ? (
+                <div className="video-trigger-box" onClick={() => setPlay(true)}>
+                  <img 
+                    src="/Acharyapankaj.jpeg" 
+                    alt="Acharya Pankaj" 
+                    className="video-thumb-img" 
+                  />
+                  <div className="overlay-minimal">
+                    <div className="play-btn-modern">
+                      <Play fill="#0a192f" stroke="none" size={24} />
+                    </div>
+                  </div>
+                  <div className="name-tag-floating">
+                    <Sparkles size={12} className="gold-text" />
+                    <span>Acharya Pankaj • Vastu Specialist</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="iframe-wrapper-final">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                    title="Vastu Video"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
             </div>
           </div>
-        ))}
+
+        </div>
       </div>
     </section>
   );

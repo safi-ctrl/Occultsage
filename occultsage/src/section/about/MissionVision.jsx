@@ -6,7 +6,7 @@ const MissionVision = () => {
     <section className="mv-section-compact">
       <div className="mv-container-wide">
         
-        {/* Mission Card */}
+        
         <div className="mv-item-card mission-border">
           <div className="mv-top-row">
             <div className="mv-icon-bg navy-bg">🎯</div>
@@ -23,7 +23,7 @@ const MissionVision = () => {
           <div className="mv-footer-bar navy-bar"></div>
         </div>
 
-        {/* Vision Card */}
+        
         <div className="mv-item-card vision-border">
           <div className="mv-top-row">
             <div className="mv-icon-bg gold-bg">👁️</div>

@@ -1,0 +1,174 @@
+
+.consultancy-section {
+  padding: 80px 0;
+  background-color: #050b18; 
+  overflow: hidden;
+}
+
+.section-header-modern {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.kicker {
+  display: block;
+  color: #00ff88;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.section-header-modern h2 {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.highlight {
+  color: #00ff88;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: #00ff88;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+
+.consultancy-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.modern-glass-card {
+  position: relative;
+  height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #101827;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dark-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(5, 11, 24, 0.2) 40%,
+    rgba(5, 11, 24, 0.95) 90%
+  );
+}
+
+.card-overlay-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.icon-badge-modern {
+  width: 50px;
+  height: 50px;
+  background: #00ff88;
+  color: #050b18;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+}
+
+.text-content h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.description-text {
+  color: #cbd5e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.action-link-luxury {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00ff88;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 1100px) {
+  .consultancy-grid-premium {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .consultancy-section {
+    padding: 50px 0;
+  }
+
+  .section-header-modern h2 {
+    font-size: 2rem;
+  }
+
+  
+  .consultancy-grid-premium {
+    display: flex; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    gap: 20px;
+    padding: 20px 25px 40px 25px; 
+    margin: 0;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+
+  
+  .consultancy-grid-premium::-webkit-scrollbar {
+    display: none;
+  }
+
+  
+  .modern-glass-card {
+    min-width: 290px; 
+    max-width: 290px;
+    height: 420px;
+    flex-shrink: 0; 
+    scroll-snap-align: center; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+}

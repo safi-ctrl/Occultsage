@@ -7,55 +7,102 @@ const PrivacyPolicy = () => {
     }, []);
 
     return (
-        <div className="pp-container">
-            <div className="pp-card">
+        <div className="pp-wrapper">
+            <div className="pp-container">
                 <header className="pp-header">
                     <h1>Privacy <span>Policy</span></h1>
-                    <p>At OccultSage, we protect your journey towards spiritual wisdom.</p>
+                    <p className="pp-last-updated">Effective Date: April 2026</p>
+                    <div className="pp-divider"></div>
                 </header>
 
-                <div className="pp-body">
+                <div className="pp-intro">
+                    <p>
+                        At <strong>OccultSage</strong>, we are committed to protecting your privacy and ensuring the security of your personal information. 
+                        This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                    </p>
+                </div>
+
+                <div className="pp-content">
                     <section className="pp-section">
-                        <h2>1. Introduction</h2>
-                        <p>Welcome to <strong>OccultSage</strong>. We are committed to safeguarding the privacy of our students and visitors. This policy describes how we collect and use your data when you explore our Vedic Astrology, Vastu, Numerology, and other occult science courses.</p>
+                        <div className="section-number">01</div>
+                        <div className="section-text">
+                            <h2>Information We Collect</h2>
+                            <p>We collect various types of information when you interact with our website or utilize our services, including:</p>
+                            <ul>
+                                <li><strong>Personal Information:</strong> Name, email address, phone number, and billing address.</li>
+                                <li><strong>Payment Information:</strong> Credit card details or other payment account information for secure transactions.</li>
+                                <li><strong>Usage Information:</strong> IP address, browser type, device identifiers, and pages visited.</li>
+                                <li><strong>Cookies:</strong> We use tracking technologies to enhance your experience. You can control these through your browser settings.</li>
+                            </ul>
+                        </div>
                     </section>
 
                     <section className="pp-section">
-                        <h2>2. Information We Collect</h2>
-                        <p>To provide a personalized learning experience, we may collect:</p>
-                        <ul>
-                            <li><strong>Personal Details:</strong> Name, Date of Birth, and Time of Birth (for Astrology practice).</li>
-                            <li><strong>Contact Info:</strong> Email address and Phone number for course updates.</li>
-                            <li><strong>Payment Data:</strong> Transaction details when you enroll in our professional courses.</li>
-                        </ul>
+                        <div className="section-number">02</div>
+                        <div className="section-text">
+                            <h2>How We Use Your Information</h2>
+                            <p>We use the collected information for various professional purposes:</p>
+                            <ul>
+                                <li>Providing and improving our products and Vedic services.</li>
+                                <li>Processing transactions and fulfilling course enrollments.</li>
+                                <li>Communicating account updates, orders, and promotional offers.</li>
+                                <li>Personalizing your experience and delivering relevant spiritual content.</li>
+                                <li>Preventing fraud and ensuring the security of our community.</li>
+                            </ul>
+                        </div>
                     </section>
 
                     <section className="pp-section">
-                        <h2>3. How We Use Your Data</h2>
-                        <p>Your information helps us in:</p>
-                        <ul>
-                            <li>Providing certified training and course materials.</li>
-                            <li>Analyzing birth charts for educational purposes during live sessions.</li>
-                            <li>Sending newsletters and information about upcoming batches with Acharya Pankaj Ji.</li>
-                        </ul>
+                        <div className="section-number">03</div>
+                        <div className="section-text">
+                            <h2>Information Sharing and Disclosure</h2>
+                            <p>We may share your information with third parties in the following cases:</p>
+                            <ul>
+                                <li><strong>Service Providers:</strong> Partners who assist in payment processing and order fulfillment.</li>
+                                <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, or government requests.</li>
+                                <li><strong>Business Transfers:</strong> In case of a merger, acquisition, or asset sale.</li>
+                                <li><strong>Consent:</strong> With your explicit permission for specific collections.</li>
+                            </ul>
+                        </div>
                     </section>
 
                     <section className="pp-section">
-                        <h2>4. Data Confidentiality</h2>
-                        <p>OccultSage follows a strict non-disclosure policy. We do not sell, trade, or rent your personal information to third parties. Your birth details and personal consultations remain 100% confidential between the mentor and the student.</p>
+                        <div className="section-number">04</div>
+                        <div className="section-text">
+                            <h2>Data Security</h2>
+                            <p>We take reasonable measures to protect your information and prevent unauthorized access. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+                        </div>
                     </section>
 
                     <section className="pp-section">
-                        <h2>5. Cookies & Tracking</h2>
-                        <p>Our website uses cookies to enhance user experience. You can choose to disable cookies through your browser settings, though it may affect some features of our website.</p>
+                        <div className="section-number">05</div>
+                        <div className="section-text">
+                            <h2>Your Choices and Rights</h2>
+                            <p>You have the right to access, correct, or delete your personal information. You may also choose to opt out of certain communications or data processing activities at any time.</p>
+                        </div>
                     </section>
 
-                    <section className="pp-section pp-contact">
-                        <h2>6. Contact Us</h2>
-                        <p>If you have any questions regarding this Privacy Policy, feel free to reach out:</p>
-                        <div className="pp-contact-info">
-                            <p><strong>Email:</strong> info@occultsage.com</p>
-                            <p><strong>Address:</strong> Unit No. 1166, 11th floor, Vegas Mall, Dwarka Sec-14, Delhi - 110078</p>
+                    <section className="pp-section">
+                        <div className="section-number">06</div>
+                        <div className="section-text">
+                            <h2>Changes to This Policy</h2>
+                            <p>We may update this Privacy Policy periodically to reflect changes in our practices or laws. We encourage you to review this page regularly for any updates.</p>
+                        </div>
+                    </section>
+
+                    <section className="pp-contact-card">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions, concerns, or feedback about our privacy practices, please reach out to our team:</p>
+                        <div className="contact-grid">
+                            <div className="contact-item">
+                                <strong>Email:</strong> <span>info@occultsage.com</span>
+                            </div>
+                            <div className="contact-item">
+                                <strong>Phone:</strong> <span>+91-9540407086</span>
+                            </div>
+                            <div className="contact-item">
+                                <strong>Location:</strong> <span>Dwarka sec-12A,The Occultsage pvt.ltd</span>
+                            </div>
                         </div>
                     </section>
                 </div>
