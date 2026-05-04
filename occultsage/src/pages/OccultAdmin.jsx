@@ -1,6 +1,6 @@
 import React from "react";
 
-import Studio from '../section/OccultAdmin/AdminStudio'; 
+import AdminStudio from '../section/OccultAdmin/AdminStudio'; 
 
 const OccultAdmin = () => {
   return (
